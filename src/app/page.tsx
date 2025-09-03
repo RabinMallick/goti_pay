@@ -1,10 +1,16 @@
 "use client";
 import Image from "next/image";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, FC } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, Variants } from "framer-motion";
 
-const features = [
+interface Feature {
+  title: string;
+  desc: string;
+  icon: string;
+}
+
+const features: Feature[] = [
   { title: "Instant Setup", desc: "Online onboarding. Live in minutes.", icon: "⚡" },
   { title: "Multiple Payment Modes", desc: "Credit/Debit cards, eWallets & PayNow covered.", icon: "💳" },
   { title: "Effortless Integration", desc: "API-first platform. Zero manual work. SDKs, plugins, full docs.", icon: "🔌" },
@@ -12,6 +18,11 @@ const features = [
   { title: "Local Support", desc: "Singapore-based support team, ready to assist.", icon: "🤝" },
   { title: "Fully Secure", desc: "PCI DSS, ISO 27001 certified. Compliance handled for you.", icon: "🛡️" },
 ];
+
+interface State {
+  mobileMenuOpen: boolean;
+  scrolled: boolean;
+}
 
 // Animation variants
 const fadeUp: Variants = {
@@ -23,8 +34,8 @@ const fadeUp: Variants = {
   }),
 };
 
-export default function Home() {
-  const [state, setState] = useState({ mobileMenuOpen: false, scrolled: false });
+const Home: FC = () => {
+  const [state, setState] = useState<State>({ mobileMenuOpen: false, scrolled: false });
 
   useEffect(() => {
     const handleScroll = () => setState(prev => ({ ...prev, scrolled: window.scrollY > 10 }));
@@ -109,8 +120,8 @@ export default function Home() {
         )}
       </nav>
 
+      {/* Hero Section */}
       <main className="min-h-screen max-w-6xl mx-auto mt-0 md:mt-3">
-        {/* Hero Section */}
         <motion.section
           initial="hidden"
           whileInView="visible"
@@ -204,4 +215,6 @@ export default function Home() {
       </motion.section>
     </>
   );
-}
+};
+
+export default Home;
