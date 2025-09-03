@@ -36,7 +36,7 @@ const ScrollTop: FC = () => {
           onClick={() =>
             window.scrollTo({ top: 0, behavior: 'smooth' })
           }
-          className="fixed bottom-5 right-5 w-14 h-14 flex items-center justify-center rounded-full bg-[var(--primary)] text-white shadow-lg hover:bg-purple-800 z-50 cursor-pointer"
+          className="fixed bottom-5 right-5 w-10 h-10  md:w-14 md:h-14 flex items-center justify-center rounded-full bg-[var(--primary)] text-white shadow-lg hover:bg-indigo-700 z-50 cursor-pointer"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
           initial={{ opacity: 0, y: 20 }}

@@ -31,6 +31,7 @@ const nextConfig = withBundleAnalyzer({
 
   // Uncomment if you want custom output
   // output: 'standalone',
+  // output: 'export',
   // distDir: 'out',
 });
 
