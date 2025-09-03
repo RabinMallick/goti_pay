@@ -61,7 +61,7 @@ const Home: FC = () => {
                 key={item}
                 whileHover={{ y: -2, scale: 1.05 }}
                 transition={{ type: "spring", stiffness: 200, damping: 15 }}
-                className="text-gray-700 hover:text-purple-700 text-sm md:text-base transition duration-200"
+                className="text-gray-700 hover:text-[var(--primary)] text-sm md:text-base transition duration-200"
                 custom={i}
                 variants={fadeUp}
                 initial="hidden"
@@ -76,7 +76,7 @@ const Home: FC = () => {
             <motion.button whileHover={{ scale: 1.05 }} className="px-3 py-1 border border-gray-300 rounded hover:bg-gray-100 text-sm">
               Login
             </motion.button>
-            <motion.button whileHover={{ scale: 1.05 }} className="px-3 py-1 bg-purple-700 text-white rounded hover:bg-purple-800 text-sm">
+            <motion.button whileHover={{ scale: 1.05 }} className="px-3 py-1 bg-[var(--primary)] text-white rounded hover:bg-indigo-700 text-sm">
               Register ↗
             </motion.button>
           </div>
@@ -99,7 +99,7 @@ const Home: FC = () => {
                 key={item}
                 whileHover={{ x: 5 }}
                 transition={{ type: "spring", stiffness: 150 }}
-                className="block w-full text-left text-gray-700 hover:text-purple-700 py-2 text-sm"
+                className="block w-full text-left text-gray-700 hover:text-[var(--primary)] py-2 text-sm"
                 custom={i}
                 variants={fadeUp}
                 initial="hidden"
@@ -114,7 +114,7 @@ const Home: FC = () => {
             <motion.button whileHover={{ scale: 1.05 }} className="w-full mt-2 px-3 py-2 border border-gray-300 rounded hover:bg-gray-100 text-sm">
               Login
             </motion.button>
-            <motion.button whileHover={{ scale: 1.05 }} className="w-full mt-2 px-3 py-2 bg-purple-700 text-white rounded hover:bg-purple-800 text-sm">
+            <motion.button whileHover={{ scale: 1.05 }} className="w-full mt-2 px-3 py-2 bg-[var(--primary)] text-white rounded hover:bg-indigo-700 text-sm">
               Register ↗
             </motion.button>
           </motion.div>
@@ -137,7 +137,7 @@ const Home: FC = () => {
           <div className="container mx-auto px-4 sm:px-6 md:px-12 lg:px-20">
             <motion.div className="max-w-xl text-white space-y-4 sm:space-y-6">
               <motion.h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight" variants={fadeUp} custom={0}>
-                Empower Your <span className="text-blue-400">Business</span>
+                Empower Your <span className="text-[var(--primary)]">Business</span>
               </motion.h1>
               <motion.p className="text-sm sm:text-base md:text-lg text-gray-200" variants={fadeUp} custom={1}>
                 Seamless payment integration, powerful APIs, and instant onboarding to get you started in minutes.
@@ -146,7 +146,7 @@ const Home: FC = () => {
                 whileHover={{ scale: 1.08 }}
                 whileTap={{ scale: 0.95 }}
                 transition={{ type: "spring", stiffness: 200, damping: 18 }}
-                className="px-5 py-2 sm:px-6 sm:py-3 bg-blue-500 hover:bg-blue-600 rounded-full text-sm sm:text-base font-medium shadow-md"
+                className="px-5 py-2 sm:px-6 sm:py-3 bg-[var(--primary)] hover:bg-indigo-700 rounded-full text-sm sm:text-base font-medium shadow-md"
                 variants={fadeUp}
                 custom={2}
               >
@@ -195,7 +195,7 @@ const Home: FC = () => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-        className="py-12 sm:py-16 px-4 md:px-20 bg-purple-700 text-white text-center"
+        className="py-12 sm:py-16 px-4 md:px-20 bg-[var(--primary)] text-white text-center"
       >
         <motion.h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-3 sm:mb-4" variants={fadeUp} custom={0}>
           Ready to get started?
@@ -207,7 +207,7 @@ const Home: FC = () => {
           whileHover={{ scale: 1.08 }}
           whileTap={{ scale: 0.95 }}
           transition={{ type: "spring", stiffness: 200, damping: 18 }}
-          className="px-6 sm:px-8 py-2 sm:py-3 bg-white text-purple-700 rounded-lg font-semibold hover:bg-gray-100 text-sm sm:text-base"
+          className="px-6 sm:px-8 py-2 sm:py-3 bg-white text-[var(--primary)] rounded-lg font-semibold hover:bg-gray-100 text-sm sm:text-base"
           variants={fadeUp}
           custom={2}
         >
