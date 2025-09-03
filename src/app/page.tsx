@@ -3,6 +3,7 @@ import Image from "next/image";
 import React, { useState, useEffect, FC } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, Variants } from "framer-motion";
+import ScrollTop from "./components/Button/ScrollTop";
 
 interface Feature {
   title: string;
@@ -213,6 +214,9 @@ const Home: FC = () => {
           Register Now ↗
         </motion.button>
       </motion.section>
+
+      <ScrollTop state={state} />
+
     </>
   );
 };
