@@ -215,7 +215,7 @@ const Home: FC = () => {
         </motion.button>
       </motion.section>
 
-      <ScrollTop state={state} />
+      <ScrollTop />
 
     </>
   );
