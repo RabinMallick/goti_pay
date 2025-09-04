@@ -42,7 +42,6 @@ const CountryBorders: React.FC<{ radius: number }> = ({ radius }) => {
         geojson.features.forEach((feature: any, i: number) => {
           const coords = feature.geometry.coordinates
           const isBangladesh = feature.properties.ADMIN === 'Bangladesh'
-console.log('coords', coords)
           const color = isBangladesh ? 'red' : 'white'
 
           const drawPolygon = (polygon: any) => {
@@ -95,7 +94,7 @@ const Earth: React.FC = () => {
         <Stars radius={100} depth={50} count={5000} factor={4} fade />
         <EarthMesh />
         <CountryBorders radius={2.01} />
-        <OrbitControls enableZoom={false} enablePan={false} autoRotate autoRotateSpeed={0.8} />
+        <OrbitControls enableZoom={true} enablePan={false} autoRotate autoRotateSpeed={0.8} />
       </Canvas>
     </div>
   )

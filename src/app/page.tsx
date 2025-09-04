@@ -5,9 +5,8 @@ import { motion } from 'framer-motion';
 import Navbar from '@/components/Navber/Navbar';
 import Footer from '@/components/Footer/Fotter';
 import ScrollTop from '@/components/Button/ScrollTop';
-import { fadeDown, fadeUp, rotateIn, staggerContainer, zoomIn } from '@/utils/VariantsFade';
-import Earth from '@/components/Earth/Earth';
 import EarthMain from '@/components/Earth/EarthMain';
+import { fadeDown, fadeUp, rotateIn, staggerContainer, zoomIn } from '@/utils/VariantsFade';
 
 interface Feature {
   title: string;
@@ -66,8 +65,6 @@ const Home: FC = () => {
           </div>
         </motion.section>
 
-
-
         {/* Features Section */}
         <motion.section className="text-center py-12 sm:py-16 px-4 md:px-20 mx-auto" initial="hidden" whileInView="visible" viewport={{ once: false, amount: 0.2 }}>
           <motion.p className="text-gray-500 mb-2 text-xs sm:text-sm uppercase tracking-wider" variants={fadeUp} custom={0}>Why GotiPay?</motion.p>
@@ -99,6 +96,7 @@ const Home: FC = () => {
 
 
       <EarthMain />
+      
       {/* Footer */}
       <Footer />
 
@@ -107,5 +105,6 @@ const Home: FC = () => {
     </motion.div>
   );
 };
+
 
 export default Home;

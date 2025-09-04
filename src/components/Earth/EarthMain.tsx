@@ -49,7 +49,7 @@ const EarthMain: React.FC = () => {
             variants={fadeUp}
             custom={0.1}
           >
-            Airwallex’s proprietary local payments network offers you a faster, more
+            Gotipay's proprietary local payments network offers you a faster, more
             cost-effective, and transparent alternative to legacy banking...
           </motion.p>
 
@@ -65,7 +65,7 @@ const EarthMain: React.FC = () => {
 
         {/* Right Earth Section */}
         <motion.div
-          className="md:w-1/2 flex justify-center mt-10 md:mt-0"
+          className="w-full md:w-1/2 flex justify-center mt-10 md:mt-0"
           variants={zoomIn}
         >
           <Earth />
