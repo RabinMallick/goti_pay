@@ -9,7 +9,6 @@ import * as THREE from 'three'
 const latLongToVector3 = (lat: number, lon: number, radius: number) => {
   const phi = (90 - lat) * (Math.PI / 180)
   const theta = (lon + 180) * (Math.PI / 180)
-
   return new THREE.Vector3(
     -radius * Math.sin(phi) * Math.cos(theta),
     radius * Math.cos(phi),
@@ -17,91 +16,12 @@ const latLongToVector3 = (lat: number, lon: number, radius: number) => {
   )
 }
 
-// Country Borders Component
-const CountryBorders: React.FC<{ radius: number; color?: string }> = ({
-  radius,
-  color = 'white',
-}) => {
-  const [borders, setBorders] = useState<React.ReactNode[]>([])
-  const [loading, setLoading] = useState(true)
-
-  useEffect(() => {
-    setLoading(true)
-    fetch(
-      'https://raw.githubusercontent.com/datasets/geo-countries/master/data/countries.geojson'
-    )
-      .then((res) => res.json())
-      .then((geojson) => {
-        const elements: React.ReactNode[] = []
-
-        geojson.features.forEach((feature: any, i: number) => {
-          const coords = feature.geometry.coordinates
-
-          if (feature.geometry.type === 'Polygon') {
-            coords.forEach((polygon: any) => {
-              const points: THREE.Vector3[] = polygon.map((c: number[]) =>
-                latLongToVector3(c[1], c[0], radius)
-              )
-              const geometry = new THREE.BufferGeometry().setFromPoints(points)
-              elements.push(
-                <line key={i + '-poly'}>
-                  <primitive object={geometry} attach="geometry" />
-                  <lineBasicMaterial color={color} linewidth={1} />
-                </line>
-              )
-            })
-          }
-
-          if (feature.geometry.type === 'MultiPolygon') {
-            coords.forEach((multi: any) => {
-              multi.forEach((polygon: any) => {
-                const points: THREE.Vector3[] = polygon.map((c: number[]) =>
-                  latLongToVector3(c[1], c[0], radius)
-                )
-                const geometry = new THREE.BufferGeometry().setFromPoints(points)
-                elements.push(
-                  <line key={i + '-multipoly'}>
-                    <primitive object={geometry} attach="geometry" />
-                    <lineBasicMaterial color={color} linewidth={1} />
-                  </line>
-                )
-              })
-            })
-          }
-        })
-
-        setBorders(elements)
-      })
-      .finally(() => setLoading(false))
-  }, [radius, color])
-
-  if (loading) {
-    return (
-      <mesh>
-        <sphereGeometry args={[2.05, 32, 32]} />
-        <meshBasicMaterial
-          wireframe
-          color="yellow"
-          opacity={0.5}
-          transparent
-        />
-      </mesh>
-    )
-  }
-
-  return <group>{borders}</group>
-}
-
-// Earth Mesh Component
+// Earth Mesh
 const EarthMesh: React.FC = () => {
   const meshRef = useRef<THREE.Mesh>(null!)
-
   useFrame(() => {
-    if (meshRef.current) {
-      meshRef.current.rotation.y += 0.0015
-    }
+    if (meshRef.current) meshRef.current.rotation.y += 0.0015
   })
-
   return (
     <mesh ref={meshRef}>
       <sphereGeometry args={[2, 64, 64]} />
@@ -110,27 +30,74 @@ const EarthMesh: React.FC = () => {
   )
 }
 
-// Main Earth Scene
+// Country Borders + Fill for Bangladesh
+const CountryBorders: React.FC<{ radius: number }> = ({ radius }) => {
+  const [borders, setBorders] = useState<React.ReactNode[]>([])
+  useEffect(() => {
+    fetch('https://raw.githubusercontent.com/datasets/geo-countries/master/data/countries.geojson')
+      .then((res) => res.json())
+      .then((geojson) => {
+        const elements: React.ReactNode[] = []
+
+        geojson.features.forEach((feature: any, i: number) => {
+          const coords = feature.geometry.coordinates
+          const isBangladesh = feature.properties.ADMIN === 'Bangladesh'
+console.log('coords', coords)
+          const color = isBangladesh ? 'red' : 'white'
+
+          const drawPolygon = (polygon: any) => {
+            const points: THREE.Vector3[] = polygon.map((c: number[]) =>
+              latLongToVector3(c[1], c[0], radius)
+            )
+            // Draw border
+            const geometry = new THREE.BufferGeometry().setFromPoints(points)
+            elements.push(
+              <line key={i + '-line'}>
+                <primitive object={geometry} attach="geometry" />
+                <lineBasicMaterial color={color} linewidth={1} />
+              </line>
+            )
+            // Draw filled mesh if Bangladesh
+            if (isBangladesh) {
+              const shape = new THREE.Shape(points.map((v) => new THREE.Vector2(v.x, v.z)))
+              const geom = new THREE.ExtrudeGeometry(shape, { depth: 0.01, bevelEnabled: false })
+              elements.push(
+                <mesh key={i + '-fill'}>
+                  <primitive object={geom} attach="geometry" />
+                  <meshBasicMaterial color={color} transparent opacity={0.5} />
+                </mesh>
+              )
+            }
+          }
+
+          if (feature.geometry.type === 'Polygon') {
+            coords.forEach(drawPolygon)
+          }
+
+          if (feature.geometry.type === 'MultiPolygon') {
+            coords.forEach((multi: any) => multi.forEach(drawPolygon))
+          }
+        })
+        setBorders(elements)
+      })
+  }, [radius])
+
+  return <group>{borders}</group>
+}
+
+// Main Earth Component
 const Earth: React.FC = () => {
   return (
-    <Canvas
-      style={{ height: '500px', width: '100%' }}
-      camera={{ position: [0, 0, 6], fov: 45 }}
-    >
-      <ambientLight intensity={0.4} />
-      <directionalLight position={[5, 5, 5]} intensity={1.2} />
-      <Stars radius={100} depth={50} count={5000} factor={4} fade />
-
-      <EarthMesh />
-      <CountryBorders radius={2.01} color="white" />
-
-      <OrbitControls
-        enableZoom={false}
-        enablePan={false}
-        autoRotate
-        autoRotateSpeed={0.8}
-      />
-    </Canvas>
+    <div className="w-full h-[50vh]">
+      <Canvas camera={{ position: [0, 0, 6], fov: 45 }}>
+        <ambientLight intensity={0.4} />
+        <directionalLight position={[5, 5, 5]} intensity={1.2} />
+        <Stars radius={100} depth={50} count={5000} factor={4} fade />
+        <EarthMesh />
+        <CountryBorders radius={2.01} />
+        <OrbitControls enableZoom={false} enablePan={false} autoRotate autoRotateSpeed={0.8} />
+      </Canvas>
+    </div>
   )
 }
 

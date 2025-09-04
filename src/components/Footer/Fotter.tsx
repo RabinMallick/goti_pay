@@ -61,7 +61,7 @@ const Footer: React.FC = () => {
   ];
 
   return (
-    <footer className="bg-gray-100 text-gray-700 mt-10">
+    <footer className="bg-gray-100 text-gray-700 pt-3">
       {/* Top logo and store buttons */}
       <motion.div
         className="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row justify-between items-center gap-4"
@@ -104,7 +104,7 @@ const Footer: React.FC = () => {
 
       {/* Top row */}
       <motion.div
-        className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-5 gap-8"
+        className="max-w-7xl mx-auto px-6 py-4 grid grid-cols-1 md:grid-cols-5 gap-8"
         variants={staggerContainer}
         initial="hidden"
         whileInView="visible"

@@ -55,7 +55,7 @@ export default function CountrySelect() {
                 </div>
                 <motion.div
                     animate={open ? "open" : "closed"}
-                    variants={arrowVariants}
+                    // variants={arrowVariants}
                     transition={{ duration: 0.2 }}
                 >
                     <ChevronDown size={12} />

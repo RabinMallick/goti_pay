@@ -136,8 +136,8 @@ const Navbar = () => {
                                 {item.name}
                                 {item.options.length > 0 && (
                                     <motion.div
+                                    // variants={arrowVariants}  
                                         animate={dropdownOpen[item.name] ? 'open' : 'closed'}
-                                        variants={arrowVariants}
                                         transition={{ duration: 0.2 }}
                                     >
                                         <ChevronDown size={12} />
@@ -195,7 +195,7 @@ const Navbar = () => {
                                     {item.options.length > 0 && (
                                         <motion.div
                                             animate={dropdownOpen[item.name] ? 'open' : 'closed'}
-                                            variants={arrowVariants}
+                                            // variants={arrowVariants}
                                             transition={{ duration: 0.2 }}
                                         >
                                             <ChevronDown size={12} />
