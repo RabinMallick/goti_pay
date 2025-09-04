@@ -4,8 +4,9 @@ import Image from 'next/image';
 import React, { useEffect, useState, useRef } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { Menu, X, ChevronDown } from 'lucide-react';
-import { arrowVariants, fadeUp } from '@/utils/VariantsFade';
+
 import CountrySelect from '../Select/CountrySelect';
+import { arrowVariants } from '@/utils/VariantsFade';
 
 interface MenuItem {
     name: string;
@@ -106,7 +107,7 @@ const Navbar = () => {
 
     return (
         <nav
-            className={`bg-white sticky top-0 z-50 transition-shadow duration-300 ${scrolled ? 'shadow-sm' : ''
+            className={`bg-white sticky top-0 z-50 transition-shadow duration-300 py-1 ${scrolled ? 'shadow-sm' : ''
                 }`}
         >
             <div className="flex justify-between items-center py-2 px-4 md:px-0 max-w-6xl mx-auto">
@@ -157,7 +158,7 @@ const Navbar = () => {
                     </motion.button>
                     <motion.button
                         whileHover={{ scale: 1.02 }}
-                        className="w-full px-3 py-2 bg-purple-700 text-white rounded hover:bg-purple-800 text-sm cursor-pointer"
+                        className="w-full px-3 py-1 border border-[var(--primary)] bg-[var(--primary)] text-white rounded hover:bg-blue-800 text-sm cursor-pointer"
                     >
                         Register ↗
                     </motion.button>
