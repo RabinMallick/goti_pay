@@ -2,7 +2,6 @@
 import Image from 'next/image';
 import React, { FC } from 'react';
 import { motion } from 'framer-motion';
-import Navbar from '@/components/Navber/Navbar';
 import Footer from '@/components/Footer/Fotter';
 import ScrollTop from '@/components/Button/ScrollTop';
 import EarthMain from '@/components/Earth/EarthMain';
@@ -27,8 +26,7 @@ const features: Feature[] = [
 const Home: FC = () => {
   return (
     <motion.div initial="hidden" whileInView="visible" viewport={{ once: false, amount: 0.2 }}>
-      {/* Navbar */}
-      <Navbar />
+  
 
       {/* Hero Section */}
       <main className="min-h-screen max-w-6xl mx-auto mt-0 md:mt-3">

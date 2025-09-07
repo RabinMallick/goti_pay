@@ -41,7 +41,7 @@ const CountryBorders: React.FC<{ radius: number }> = ({ radius }) => {
 
         geojson.features.forEach((feature: any, i: number) => {
           const coords = feature.geometry.coordinates
-          const isBangladesh = feature.properties.ADMIN === 'Bangladesh'
+          const isBangladesh = feature.properties.name === 'Bangladesh'
           const color = isBangladesh ? 'red' : 'white'
 
           const drawPolygon = (polygon: any) => {

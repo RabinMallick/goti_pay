@@ -1,25 +1,6 @@
-import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
-import "./globals.css";
+import Footer from "@/components/Footer/Fotter";
 import Navbar from "@/components/Navber/Navbar";
-
-const poppins = Poppins({
-  subsets: ["latin"],
-  weight: [
-    "100",
-    "200",
-    "300",
-    "400",
-    "500",
-    "600",
-    "700",
-    "800",
-    "900"
-  ],
-  style: ["normal", "italic"],
-  display: "swap",
-  variable: "--font-poppins",
-});
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Goti Pay",
@@ -33,8 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${poppins.variable} antialiased`} >
-        <Navbar/>
+      <body >
         {children}
       </body>
     </html>

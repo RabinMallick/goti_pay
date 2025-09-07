@@ -4,9 +4,8 @@ import Image from 'next/image';
 import React, { useEffect, useState, useRef } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { Menu, X, ChevronDown } from 'lucide-react';
-
 import CountrySelect from '../Select/CountrySelect';
-import { arrowVariants } from '@/utils/VariantsFade';
+
 
 interface MenuItem {
     name: string;
@@ -20,7 +19,7 @@ const menuItems: MenuItem[] = [
     { name: 'Developers', options: [] },
 ];
 
-const Navbar = () => {
+const  Navbar: React.FC  = ()=> {
     const [mobileOpen, setMobileOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
     const [dropdownOpen, setDropdownOpen] = useState<Record<string, boolean>>(

@@ -9,7 +9,8 @@ import {
   staggerContainer,
   topItemVariants,
 } from "@/utils/VariantsFade";
-import Image from "next/image"; // For logo and store images
+import Image from "next/image";
+import Link from "next/link";
 
 const Footer: React.FC = () => {
   const topCols = [
@@ -51,7 +52,8 @@ const Footer: React.FC = () => {
       items: [
         "Who we are",
         "Operating principles",
-        "Terms & policies",
+        "Terms & Conditions",
+        "Privacy & Policy",
         "Cookie Preference Centre",
         "Careers",
         "Partnership program",
@@ -59,6 +61,16 @@ const Footer: React.FC = () => {
     },
     { title: "Resources", items: ["Blog", "Newsroom", "FAQ", "Support"] },
   ];
+
+  // Helper to generate URLs
+  const generateLink = (item: string) => {
+    const exceptions: Record<string, string> = {
+      "Privacy & Policy": "/privacy-policy",
+      "Terms & Conditions": "/terms-conditions",
+      "Cookie Preference Centre": "/cookie-preference",
+    };
+    return exceptions[item] || `/${item.replace(/\s+/g, "-").toLowerCase()}`;
+  };
 
   return (
     <footer className="bg-gray-100 text-gray-700 pt-3">
@@ -70,34 +82,15 @@ const Footer: React.FC = () => {
         whileInView="visible"
         viewport={{ once: false, amount: 0.3 }}
       >
-        {/* Logo */}
         <motion.div variants={fadeUp}>
-          <Image
-            src="/logo.svg" // replace with your logo path
-            alt="Gotipay Logo"
-            width={150}
-            height={50}
-            className="object-contain"
-          />
+          <Image src="/logo.svg" alt="Gotipay Logo" width={150} height={50} className="object-contain" />
         </motion.div>
-
-        {/* App Store Buttons */}
         <motion.div className="flex gap-3" variants={fadeUp}>
           <a href="https://www.apple.com/app-store/" target="_blank" rel="noopener noreferrer">
-            <Image
-              src="/apple-store.png" // replace with your Apple store image
-              alt="Download on Apple Store"
-              width={140}
-              height={40}
-            />
+            <Image src="/apple-store.png" alt="Download on Apple Store" width={140} height={40} />
           </a>
           <a href="https://play.google.com/store" target="_blank" rel="noopener noreferrer">
-            <Image
-              src="/play-store.png" // replace with your Play store image
-              alt="Get it on Google Play"
-              width={140}
-              height={40}
-            />
+            <Image src="/play-store.png" alt="Get it on Google Play" width={140} height={40} />
           </a>
         </motion.div>
       </motion.div>
@@ -116,7 +109,9 @@ const Footer: React.FC = () => {
             <ul className="space-y-2 text-sm">
               {col.items.map((item, i) => (
                 <motion.li key={i} variants={fadeUp} custom={i}>
-                  {item}
+                  <Link href={generateLink(item)} className="hover:underline">
+                    {item}
+                  </Link>
                 </motion.li>
               ))}
             </ul>
@@ -137,7 +132,9 @@ const Footer: React.FC = () => {
             <h4 className="font-bold mb-2">{col.title}</h4>
             {col.items.map((item, i) => (
               <motion.p key={i} variants={fadeUp} custom={i}>
-                {item}
+                <Link href={generateLink(item)} className="hover:underline">
+                  {item}
+                </Link>
               </motion.p>
             ))}
           </motion.div>
