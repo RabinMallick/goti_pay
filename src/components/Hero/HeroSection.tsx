@@ -81,7 +81,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ icons, title, description }) 
                             }}
                             animate={{ opacity: [0, 1, 0], scale: [0.5, 1, 0.5] }}
                             transition={{
-                                duration: 2 + Math.random() * 6,
+                                duration: 2 + Math.random() * 5,
                                 repeat: Infinity,
                                 repeatType: 'loop',
                                 delay: Math.random() * 2,
