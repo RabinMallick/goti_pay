@@ -11,6 +11,8 @@ import {
   HiOutlineShieldCheck,
 } from 'react-icons/hi';
 import HeroSection from '@/components/Hero/HeroSection';
+import { RootState } from '@/store/store';
+import { useSelector } from 'react-redux';
 
 interface SectionProps {
   title: { en: string; bn: string };
@@ -43,7 +45,7 @@ const Section: React.FC<SectionProps> = ({
 };
 
 const TermsConditions: React.FC = () => {
-  const [language, setLanguage] = useState<'en' | 'bn'>('en'); // default English
+  const language = useSelector((state: RootState) => state.language.value);
 
   const icons = [
     HiOutlineDocumentText,
@@ -66,8 +68,6 @@ const TermsConditions: React.FC = () => {
               ? 'By using GOTIPAY services, you agree to comply with these Terms & Conditions. These terms govern your access and use of our payment gateway.'
               : 'GOTIPAY সেবা ব্যবহার করার মাধ্যমে আপনি এই শর্তাবলীর সাথে সম্মতি জানাচ্ছেন। এই শর্তাবলী আমাদের পেমেন্ট গেটওয়ে ব্যবহারের নিয়মাবলী নির্ধারণ করে।'
           }
-          language={language}
-          setLanguage={setLanguage}
         />
 
         {/* Terms Content Section */}
