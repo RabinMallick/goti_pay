@@ -51,7 +51,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ icons, title, description }) 
                         transition={{ duration: 1 }}
                     >
                         <motion.h1
-                            className="text-3xl md:text-3xl font-extrabold text-white mb-4 drop-shadow-lg"
+                            className="text-2xl md:text-3xl font-extrabold text-white mb-4 drop-shadow-lg"
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.3, duration: 1 }}
@@ -59,7 +59,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ icons, title, description }) 
                             {title}
                         </motion.h1>
                         <motion.p
-                            className="text-lg md:text-md text-gray-200 mb-6"
+                            className="text-[12px] md:text-md text-gray-200 mb-6"
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.6, duration: 1 }}
