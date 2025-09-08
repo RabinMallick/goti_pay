@@ -4,6 +4,8 @@ import Image from 'next/image';
 import React, { FC, useState } from 'react';
 import { motion } from 'framer-motion';
 import { CiCircleCheck } from 'react-icons/ci';
+import MerchantNoticeCard from '@/components/common/card/MerchantNoticeCard';
+import ProceedingCard from '@/components/common/card/ProceedingCard';
 
 const logos = [
     '/bkash.svg',
@@ -61,30 +63,10 @@ const NetBanking: FC = () => {
                     ))}
                 </div>
 
-                <p className="text-[11px] mt-4 text-gray-500 p-2 rounded-md bg-gray-50 leading-4 border border-gray-200">
-                    By proceeding with this payment, you agree to our{' '}
-                    <span className="text-[var(--primary)] underline cursor-pointer">
-                        Terms and Conditions
-                    </span>
-                    , which are limited to facilitating your payment to &quot;Company
-                    Name&quot;.
-                </p>
+               <ProceedingCard/>
 
-                <div className="text-[11px] mt-4 text-blue-800 rounded-md bg-gray-50 leading-4 border border-gray-200">
-                    <div className="grid grid-cols-2 border-b border-gray-200">
-                        <div className="px-2 py-1 border-r border-gray-200">Amount</div>
-                        <div className="px-2 py-1 text-right">10000.00 BDT</div>
-                    </div>
-                    <div className="grid grid-cols-2 ">
-                        <div className="px-2 py-1 border-r border-gray-200">
-                            Gateway Charge
-                        </div>
-                        <div className="px-2 py-1 text-right">150.00 BDT</div>
-                    </div>
-                </div>
-                <p className="text-[8px] text-red-500 mt-1">
-                    Merchant choose Gateway Charge paid by Customer
-                </p>
+
+                <MerchantNoticeCard />
 
                 <motion.button
                     type="submit"
