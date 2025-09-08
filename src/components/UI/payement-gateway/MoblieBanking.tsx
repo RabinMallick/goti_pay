@@ -1,11 +1,10 @@
 'use client';
 
-import Image from 'next/image';
 import React, { FC, useState } from 'react';
 import { motion } from 'framer-motion';
-import { CiCircleCheck } from 'react-icons/ci';
 import MerchantNoticeCard from '@/components/common/card/MerchantNoticeCard';
 import ProceedingCard from '@/components/common/card/ProceedingCard';
+import LogoCard from './LogoCard';
 
 const logos = [
     '/bkash.svg',
@@ -19,6 +18,8 @@ const logos = [
     '/nagad.svg',
 ];
 
+
+// --- Main Component ---
 const MoblieBanking: FC = () => {
     const [selected, setSelected] = useState<number | null>(null);
 
@@ -36,30 +37,13 @@ const MoblieBanking: FC = () => {
                 </p>
 
                 <div className="grid grid-cols-3 gap-3 mt-3">
-                    {logos.map((logo, index: number) => (
-                        <div
+                    {logos.map((logo, index) => (
+                        <LogoCard
                             key={index}
+                            logo={logo}
+                            selected={selected === index}
                             onClick={() => setSelected(index)}
-                            className={`flex justify-center items-center h-16 relative rounded-md cursor-pointer
-      ${selected === index
-                                    ? 'border-[var(--primary)] ring-1 ring-[var(--primary)]'
-                                    : ''
-                                }`}
-                        >
-                            <div className=" w-full h-full relative">
-                                <Image
-                                    src={logo}
-                                    alt={`logo-${index}`}
-                                    fill
-                                    className="object-contain p-2"
-                                />
-                            </div>
-                            {selected === index && (
-                                <div className="absolute right-1 top-1 text-sm text-green-800">
-                                    <CiCircleCheck />
-                                </div>
-                            )}
-                        </div>
+                        />
                     ))}
                 </div>
 
