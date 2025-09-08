@@ -6,6 +6,7 @@ import Footer from '@/components/Footer/Fotter';
 import ScrollTop from '@/components/Button/ScrollTop';
 import EarthMain from '@/components/Earth/EarthMain';
 import { fadeDown, fadeUp, rotateIn, staggerContainer, zoomIn } from '@/utils/VariantsFade';
+import Navbar from '@/components/Navber/Navbar';
 
 interface Feature {
   title: string;
@@ -26,7 +27,8 @@ const features: Feature[] = [
 const Home: FC = () => {
   return (
     <motion.div initial="hidden" whileInView="visible" viewport={{ once: false, amount: 0.2 }}>
-  
+
+      <Navbar />
 
       {/* Hero Section */}
       <main className="min-h-screen max-w-6xl mx-auto mt-0 md:mt-3">
@@ -94,7 +96,7 @@ const Home: FC = () => {
 
 
       <EarthMain />
-      
+
       {/* Footer */}
       <Footer />
 

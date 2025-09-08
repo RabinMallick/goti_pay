@@ -13,6 +13,7 @@ import {
 import HeroSection from '@/components/Hero/HeroSection';
 import { RootState } from '@/store/store';
 import { useSelector } from 'react-redux';
+import Navbar from '@/components/Navber/Navbar';
 
 interface SectionProps {
   title: { en: string; bn: string };
@@ -59,6 +60,9 @@ const TermsConditions: React.FC = () => {
   return (
     <>
       <div className="min-h-screen bg-gray-50 text-gray-800">
+
+        <Navbar />
+        
         {/* Hero Section */}
         <HeroSection
           icons={icons}
