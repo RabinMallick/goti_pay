@@ -3,7 +3,6 @@ import React, { FC } from 'react'
 import { CiCircleCheck } from 'react-icons/ci';
 import { AnimatePresence, motion } from 'framer-motion';
 
-
 interface LogoCardProps {
     logo: string;
     selected: boolean;
