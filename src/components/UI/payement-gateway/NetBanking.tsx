@@ -7,15 +7,10 @@ import ProceedingCard from '@/components/common/card/ProceedingCard';
 import LogoCard from './LogoCard';
 
 const logos: string[] = [
-  '/bkash.svg',
-  '/rocket.svg',
-  '/upay.svg',
-  '/stpay.svg',
-  '/pathao.svg',
-  '/mcash.svg',
-  '/cellfin.svg',
-  '/pocket.svg',
-  '/nagad.svg',
+  '/brac.svg',
+  '/ebl.svg',
+  '/dbbl.svg',
+  '/ific.svg',
 ];
 
 const NetBanking: FC = () => {
