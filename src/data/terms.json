@@ -1,0 +1,195 @@
+[
+  {
+    "title": {
+      "en": "Last Updated: September 7, 2025",
+      "bn": "সর্বশেষ হালনাগাদ: সেপ্টেম্বর ৭, ২০২৫"
+    },
+    "color": "blue",
+    "icon": "HiOutlineDocumentText",
+    "content": {
+      "en": [
+        "Please read these Terms and Conditions (\"Terms\", \"Terms and Conditions\") carefully before using the GotiPay website, mobile applications, and any other products or services (collectively, the \"Services\") operated by GotiPay Ltd., a company registered in Bangladesh (\"us\", \"we\", or \"our\").",
+        "Your access to and use of the Services is conditioned upon your acceptance of and compliance with these Terms. These Terms apply to all visitors, users, and others who wish to access or use the Services.",
+        "By accessing or using the Services, you agree to be bound by these Terms. If you disagree with any part of the terms, then you do not have permission to access the Services."
+      ],
+      "bn": [
+        "অনুগ্রহ করে এই শর্তাবলী (\"শর্তাবলী\", \"Terms and Conditions\") মনোযোগ সহকারে পড়ুন GotiPay ওয়েবসাইট, মোবাইল অ্যাপ্লিকেশন, এবং অন্যান্য যে কোনো পণ্য বা পরিষেবা (মোট মিলিয়ে, \"সেবা\") ব্যবহারের আগে, যা পরিচালনা করে GotiPay লিমিটেড, বাংলাদেশে নিবন্ধিত কোম্পানি (\"আমরা\", \"আমাদের\").",
+        "সেবাগুলোতে আপনার অ্যাক্সেস এবং ব্যবহার এই শর্তাবলী মেনে চলার শর্তসাপেক্ষ। এই শর্তাবলী সমস্ত দর্শক, ব্যবহারকারী এবং যারা সেবা ব্যবহার করতে বা অ্যাক্সেস করতে চায় তাদের জন্য প্রযোজ্য।",
+        "সেবা ব্যবহার বা অ্যাক্সেস করার মাধ্যমে আপনি এই শর্তাবলীর অধীনে বাঁধা পড়তে সম্মত হন। যদি আপনি শর্তগুলোর কোন অংশের সাথে একমত না হন, তাহলে আপনার সেবা ব্যবহারের অনুমতি নেই।"
+      ]
+    }
+  },
+  {
+    "title": { "en": "Accounts", "bn": "অ্যাকাউন্ট" },
+    "color": "indigo",
+    "icon": "HiOutlineShieldCheck",
+    "content": {
+      "en": [
+        "When you create an account with us, you guarantee that you are above the age of 18, and that the information you provide us is accurate, complete, and current at all times.",
+        "Inaccurate, incomplete, or obsolete information may result in the immediate termination of your account on the Services.",
+        "You are responsible for maintaining the confidentiality of your account and password, including but not limited to the restriction of access to your computer and/or account. You agree to accept responsibility for any and all activities or actions that occur under your account and/or password, whether your password is with our Service or a third-party service. You must notify us immediately upon becoming aware of any breach of security or unauthorized use of your account.",
+        "You may not use as a username the name of another person or entity or that is not lawfully available for use, a name or trademark that is subject to any rights of another person or entity other than you without appropriate authorization, or a name that is otherwise offensive, vulgar, or obscene."
+      ],
+      "bn": [
+        "যখন আপনি আমাদের সাথে একটি অ্যাকাউন্ট তৈরি করেন, আপনি নিশ্চিত করেন যে আপনার বয়স ১৮ বছরের বেশি এবং যে তথ্য আপনি আমাদের প্রদান করেন তা সবসময় সঠিক, সম্পূর্ণ এবং হালনাগাদ।",
+        "অসঠিক, অসম্পূর্ণ বা পুরনো তথ্য আপনার অ্যাকাউন্টের তাৎক্ষণিক বন্ধের কারণ হতে পারে।",
+        "আপনি আপনার অ্যাকাউন্ট এবং পাসওয়ার্ডের গোপনীয়তা বজায় রাখার জন্য দায়ী, যার মধ্যে আপনার কম্পিউটার এবং/অথবা অ্যাকাউন্টে প্রবেশ সীমাবদ্ধ করা অন্তর্ভুক্ত। আপনার অ্যাকাউন্ট বা পাসওয়ার্ড ব্যবহার করে যে কোনো কার্যক্রমের জন্য আপনি দায়ী থাকবেন। যদি কোনো সুরক্ষা লঙ্ঘন বা অননুমোদিত ব্যবহার হয়, তা অবিলম্বে আমাদের জানাতে হবে।",
+        "আপনি অন্য কোনও ব্যক্তির বা প্রতিষ্ঠানের নাম ব্যবহার করতে পারবেন না, অথবা এমন নাম যা আইনগতভাবে ব্যবহারযোগ্য নয়, অথবা এমন নাম যা অন্য কারো অধিকারাধীন ট্রেডমার্ক সম্পর্কিত, বা যা অবমাননাকর, অশ্লীল বা আপত্তিকর।"
+      ]
+    }
+  },
+  {
+    "title": { "en": "Intellectual Property", "bn": "মেধাস্বত্ব" },
+    "color": "green",
+    "icon": "HiOutlineCreditCard",
+    "content": {
+      "en": [
+        "The Services and their original content (excluding Content provided by users), features, and functionality are and will remain the exclusive property of GotiPay Ltd. and its licensors.",
+        "The Services are protected by copyright, trademark, and other applicable laws of Bangladesh and international treaties. Our trademarks and trade dress may not be used in connection with any product or service without the prior written consent of GotiPay Ltd."
+      ],
+      "bn": [
+        "সেবা এবং তাদের মূল বিষয়বস্তু (ব্যবহারকারীদের দ্বারা প্রদত্ত কনটেন্ট বাদে), বৈশিষ্ট্য এবং কার্যকারিতা GotiPay Ltd. এবং তার লাইসেন্সদাতাদের একচেটিয়া সম্পদ এবং এভাবেই থাকবে।",
+        "সেবা বাংলাদেশের কপিরাইট, ট্রেডমার্ক এবং অন্যান্য প্রযোজ্য আইন এবং আন্তর্জাতিক চুক্তি দ্বারা সুরক্ষিত। GotiPay Ltd. এর পূর্ব লিখিত সম্মতি ছাড়া আমাদের ট্রেডমার্ক বা ট্রেড ড্রেস কোনো পণ্য বা সেবার সঙ্গে ব্যবহার করা যাবে না।"
+      ]
+    }
+  },
+  {
+    "title": { "en": "Links To Other Web Sites", "bn": "অন্যান্য ওয়েবসাইটের লিঙ্ক" },
+    "color": "yellow",
+    "icon": "HiOutlineLink",
+    "content": {
+      "en": [
+        "Our Services may contain links to third-party web sites or services that are not owned or controlled by GotiPay Ltd.",
+        "GotiPay Ltd. has no control over, and assumes no responsibility for the content, privacy policies, or practices of any third-party web sites or services. We do not warrant the offerings of any of these entities/individuals or their websites.",
+        "You acknowledge and agree that GotiPay Ltd. shall not be responsible or liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with use of or reliance on any such content, goods or services available on or through any such third-party web sites or services.",
+        "We strongly advise you to read the terms and conditions and privacy policies of any third-party web sites or services that you visit."
+      ],
+      "bn": [
+        "আমাদের সেবায় তৃতীয় পক্ষের ওয়েবসাইট বা পরিষেবার লিঙ্ক থাকতে পারে যা GotiPay Ltd. এর মালিকানা বা নিয়ন্ত্রণাধীন নয়।",
+        "GotiPay Ltd. এর কোনো নিয়ন্ত্রণ নেই এবং আমরা কোনো তৃতীয় পক্ষের ওয়েবসাইট বা পরিষেবার কনটেন্ট, গোপনীয়তা নীতি বা অনুশীলনের জন্য দায়ী নয়। আমরা এই সংস্থাগুলোর বা তাদের ওয়েবসাইটের পরিষেবাগুলোর জন্য কোনো নিশ্চয়তা দিই না।",
+        "আপনি স্বীকার করছেন এবং সম্মত হচ্ছেন যে GotiPay Ltd. সরাসরি বা পরোক্ষভাবে কোনো ক্ষতি বা হানির জন্য দায়ী থাকবে না, যা এই ধরনের কনটেন্ট, পণ্য বা পরিষেবার ব্যবহার বা নির্ভরতার কারণে হতে পারে।",
+        "আপনি যে কোনো তৃতীয় পক্ষের ওয়েবসাইট বা পরিষেবা ভিজিট করলে, তাদের শর্তাবলী ও গোপনীয়তা নীতি মনোযোগ দিয়ে পড়ার জন্য আমরা দৃঢ়ভাবে পরামর্শ দিই।"
+      ]
+    }
+  },
+  {
+    "title": { "en": "Termination", "bn": "সমাপ্তি" },
+    "color": "red",
+    "icon": "HiOutlineXCircle",
+    "content": {
+      "en": [
+        "We may terminate or suspend your account and bar access to the Services immediately, without prior notice or liability, under our sole discretion, for any reason whatsoever and without limitation, including but not limited to a breach of the Terms.",
+        "If you wish to terminate your account, you may simply discontinue using the Services.",
+        "All provisions of the Terms which by their nature should survive termination shall survive termination, including, without limitation, ownership provisions, warranty disclaimers, indemnity, and limitations of liability."
+      ],
+      "bn": [
+        "আমরা যে কোনো কারণে এবং আমাদের একক বিবেচনায়, পূর্ব বিজ্ঞপ্তি বা দায়বদ্ধতা ছাড়াই, আপনার অ্যাকাউন্ট বন্ধ বা স্থগিত করতে পারি এবং সেবায় অ্যাক্সেস সীমিত করতে পারি, যার মধ্যে শর্তাবলী লঙ্ঘন অন্তর্ভুক্ত।",
+        "আপনি যদি আপনার অ্যাকাউন্ট বন্ধ করতে চান, তাহলে কেবল সেবা ব্যবহার বন্ধ করুন।",
+        "যে কোনো শর্তাবলী প্রকৃতিগতভাবে সমাপ্তির পরও প্রযোজ্য হবে তা সমাপ্তির পরও কার্যকর থাকবে, যার মধ্যে মালিকানা, ওয়ারেন্টি ডিসক্লেইমার, ক্ষতিপূরণ, এবং দায় সীমাবদ্ধতা অন্তর্ভুক্ত।"
+      ]
+    }
+  },
+  {
+    "title": { "en": "Indemnification", "bn": "ক্ষতিপূরণ" },
+    "color": "orange",
+    "icon": "HiOutlineShieldExclamation",
+    "content": {
+      "en": [
+        "You agree to defend, indemnify, and hold harmless GotiPay Ltd. and its licensee and licensors, and their employees, contractors, agents, officers, and directors, from and against any and all claims, damages, obligations, losses, liabilities, costs or debt, and expenses (including but not limited to attorney's fees), resulting from or arising out of (a) your use and access of the Services, by you or any person using your account and password; (b) a breach of these Terms; or (c) Content posted on the Services."
+      ],
+      "bn": [
+        "আপনি GotiPay Ltd. এবং এর লাইসেন্সধারী ও লাইসেন্সদাতাদের, এবং তাদের কর্মচারী, ঠিকাদার, এজেন্ট, অফিসার এবং পরিচালককে যে কোনো দাবি, ক্ষতি, দায়, দায়বদ্ধতা, খরচ বা ব্যয় (অ্যাটর্নির ফি সহ) থেকে রক্ষা এবং ক্ষতিপূরণ দেওয়ার জন্য সম্মত হন, যা আপনার সেবা ব্যবহার, এই শর্তাবলী লঙ্ঘন বা সেবায় পোস্ট করা কনটেন্ট থেকে উদ্ভূত হতে পারে।"
+      ]
+    }
+  },
+  {
+    "title": { "en": "Limitation Of Liability", "bn": "দায়ের সীমাবদ্ধতা" },
+    "color": "teal",
+    "icon": "HiOutlineExclamationCircle",
+    "content": {
+      "en": [
+        "In no event shall GotiPay Ltd., nor its directors, employees, partners, agents, suppliers, or affiliates, be liable for any indirect, incidental, special, consequential, or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from (i) your access to or use of or inability to access or use the Services; (ii) any conduct or content of any third party on the Services; (iii) any content obtained from the Services; and (iv) unauthorized access, use, or alteration of your transmissions or content."
+      ],
+      "bn": [
+        "কোনো অবস্থাতেই GotiPay Ltd., এর পরিচালক, কর্মচারী, অংশীদার, এজেন্ট, সরবরাহকারী বা সংযুক্তি, কোনো পরোক্ষ, INCIDENTAL, বিশেষ, ফলস্বরূপ, বা শাস্তিমূলক ক্ষতির জন্য দায়ী থাকবে না, যার মধ্যে লাভ, ডেটা, ব্যবহার, সুপরিচিতি বা অন্যান্য অমূর্ত ক্ষতি অন্তর্ভুক্ত, যা সেবা ব্যবহার বা অ্যাক্সেসের কারণে উদ্ভূত হতে পারে।"
+      ]
+    }
+  },
+  {
+    "title": { "en": "Disclaimer", "bn": "অস্বীকৃতি" },
+    "color": "gray",
+    "icon": "HiOutlineInformationCircle",
+    "content": {
+      "en": [
+        "Your use of the Services is at your sole risk. The Services are provided on an \"AS IS\" and \"AS AVAILABLE\" basis without warranties of any kind, whether express or implied.",
+        "GotiPay Ltd., its subsidiaries, affiliates, and its licensors do not warrant that (a) the Services will function uninterrupted, secure, or available at any particular time or location; (b) any errors or defects will be corrected; (c) the Services are free of viruses or other harmful components; or (d) the results of using the Services will meet your requirements."
+      ],
+      "bn": [
+        "আপনার সেবা ব্যবহার সম্পূর্ণ আপনার নিজের ঝুঁকিতে। সেবাগুলো \"AS IS\" এবং \"AS AVAILABLE\" ভিত্তিতে দেওয়া হয়, কোনো প্রকার প্রকাশ্য বা নীরব গ্যারান্টি ছাড়া।",
+        "GotiPay Ltd., এর সহায়ক প্রতিষ্ঠান, সংযুক্তি এবং লাইসেন্সদাতারা নিশ্চিত করে না যে (a) সেবা নিরবিচ্ছিন্ন, নিরাপদ বা নির্দিষ্ট সময়ে বা স্থানে উপলব্ধ থাকবে; (b) কোনো ত্রুটি বা দোষ সংশোধন করা হবে; (c) সেবা ভাইরাস বা ক্ষতিকর উপাদান মুক্ত; বা (d) সেবা ব্যবহারের ফলাফল আপনার প্রয়োজনীয়তা পূরণ করবে।"
+      ]
+    }
+  },
+  {
+    "title": { "en": "Exclusions", "bn": "বাদ" },
+    "color": "purple",
+    "icon": "HiOutlineBan",
+    "content": {
+      "en": [
+        "Some jurisdictions do not allow the exclusion of certain warranties or the exclusion or limitation of liability for consequential or incidental damages, so the limitations above may not apply to you."
+      ],
+      "bn": [
+        "কিছু অঞ্চল কিছু গ্যারান্টি বা পরোক্ষ বা INCIDENTAL ক্ষতির জন্য দায় সীমাবদ্ধতা অনুমোদন করে না, তাই উপরোক্ত সীমাবদ্ধতা আপনার ক্ষেত্রে প্রযোজ্য নাও হতে পারে।"
+      ]
+    }
+  },
+  {
+    "title": { "en": "Governing Law", "bn": "শাসন আইন" },
+    "color": "cyan",
+    "icon": "HiOutlineGlobeAlt",
+    "content": {
+      "en": [
+        "These Terms shall be governed and construed in accordance with the laws of Bangladesh, without regard to its conflict of law provisions.",
+        "Our failure to enforce any right or provision of these Terms will not be considered a waiver of those rights. If any provision of these Terms is held to be invalid or unenforceable by a court, the remaining provisions will remain in effect.",
+        "These Terms constitute the entire agreement between us regarding our Services and supersede any prior agreements regarding the Services."
+      ],
+      "bn": [
+        "এই শর্তাবলী বাংলাদেশের আইনের আওতায় থাকবে এবং এর বিরোধ আইন বিবেচনা করবে না।",
+        "আমাদের কোনো অধিকার বা বিধান প্রয়োগে ব্যর্থতা সেই অধিকার ত্যাগ হিসেবে গণ্য হবে না। যদি কোনো বিধান অকার্যকর হয়, বাকী বিধান কার্যকর থাকবে।",
+        "এই শর্তাবলী আমাদের সেবা সম্পর্কিত সম্পূর্ণ চুক্তি এবং পূর্বের যে কোনো চুক্তি স্থগিত করে।"
+      ]
+    }
+  },
+  {
+    "title": { "en": "Changes", "bn": "পরিবর্তন" },
+    "color": "pink",
+    "icon": "HiOutlineRefresh",
+    "content": {
+      "en": [
+        "We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision is material, we will provide at least 30 days' notice prior to any new terms taking effect.",
+        "By continuing to access or use our Services after any revisions become effective, you agree to be bound by the revised terms. If you do not agree to the new terms, you are no longer authorized to use the Services."
+      ],
+      "bn": [
+        "আমরা যে কোনো সময় একক বিবেচনায় এই শর্তাবলী পরিবর্তন বা প্রতিস্থাপন করার অধিকার রাখি। গুরুত্বপূর্ণ পরিবর্তনের ক্ষেত্রে, নতুন শর্ত প্রযোজ্য হওয়ার কমপক্ষে ৩০ দিন আগে বিজ্ঞপ্তি দেওয়া হবে।",
+        "পরিবর্তনের পরও সেবা ব্যবহার অব্যাহত রাখলে, আপনি নতুন শর্তাবলীর অধীনে বাধ্য থাকবেন। যদি আপনি একমত না হন, তাহলে সেবা ব্যবহার করা আর অনুমোদিত নয়।"
+      ]
+    }
+  },
+  {
+    "title": { "en": "Contact Us", "bn": "যোগাযোগ করুন" },
+    "color": "blue",
+    "icon": "HiOutlineMail",
+    "content": {
+      "en": [
+        "If you have any questions about these Terms, please contact us:",
+        "• By email: legal@gotipay.com",
+        "• By mail: GotiPay Legal Department, 104 Sukhrabad, Dhanmondi, Dhaka-1207, Bangladesh."
+      ],
+      "bn": [
+        "যদি আপনার এই শর্তাবলী সম্পর্কে কোনো প্রশ্ন থাকে, অনুগ্রহ করে আমাদের সাথে যোগাযোগ করুন:",
+        "• ইমেইল: legal@gotipay.com",
+        "• ডাকের মাধ্যমে: GotiPay Legal Department, 104 Sukhrabad, Dhanmondi, Dhaka-1207, Bangladesh."
+      ]
+    }
+  }
+]

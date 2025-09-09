@@ -128,7 +128,7 @@ const PaymentSection: React.FC<{
   rate: string;
   amexRate?: string;
 }> = ({ title, items, rate, amexRate }) => (
-  <motion.div variants={sectionVariant} className="mb-6">
+  <motion.div variants={sectionVariant} className="mb-8">
     <h4 className="font-normal mb-2 text-xs md:text-[0.85rem] text-gray-600">{title}</h4>
     <div className="grid grid-cols-12 items-center">
       <div className="flex col-span-7 gap-1 flex-wrap ">{items.map(card => (
@@ -144,13 +144,13 @@ const PaymentSection: React.FC<{
       <div className="col-span-5 border-l border-gray-300 pl-2 text-left text-[10px] text-gray-500">
         {rate && <>
           <p>{rate || '0%'}</p>
-          <p>per transaction</p>
+          <p>Per transaction</p>
         </>}
 
         {amexRate && (
           <>
             <p>{amexRate}</p>
-            <p>per transaction for Amex</p>
+            <p>Per transaction for Amex</p>
           </>
         )}
       </div>
@@ -180,23 +180,42 @@ const PaymentPlans: React.FC = () => (
           variants={cardVariant}
           className="flex flex-col justify-between border border-gray-200 rounded-md bg-white md:shadow-lg hover:shadow-2xl transition"
         >
-          <h3 className={`p-2 px-3 rounded-t text-[20px] sm:text-2xl font-bold text-center ${plan.color}`}>{plan.name}</h3>
+          <h3 className={`p-2 md:p-3 px-3 rounded-t text-[20px]  font-semibold text-center ${plan.color}`}>{plan.name}</h3>
 
           <div className='p-4 py-2 sm:p-6 sm:py-4'>
             <PaymentSection title="Debit & Credit Cards" items={plan.debitCards} rate={plan.debitRate} amexRate={plan.debitRateAmex} />
             <PaymentSection title="Mobile Banking" items={plan.mobileBanking} rate={plan.mobileRate} amexRate={plan.debitRateAmex} />
             <PaymentSection title="Net Banking" items={plan.netBanking} rate={plan.netRate} amexRate={plan.debitRateAmex} />
 
-            <div className="flex justify-center mb-4 sm:mb-0">
-              <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className={`${plan.buttonColor} text-[14px] text-white py-2 rounded-lg font-medium transition w-[150px] cursor-pointer`}>
+            {/* <div className="flex justify-center mb-4 sm:mb-0 ">
+              <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className={`${plan.buttonColor} text-[10px] text-white py-2 rounded-lg font-medium transition w-[150px] cursor-pointer`}>
                 Contact Sales
               </motion.button>
-            </div>
+            </div> */}
 
           </div>
         </motion.div>
       ))}
+
     </div>
+
+    <div className='mt-8 max-w-6xl mx-2 sm:mx-4 lg:mx-auto text-center'>
+      <p className="mb-4 text-gray-500 text-sm">
+        For more information, don't hesitate to contact us.
+      </p>
+
+      <div>
+        <motion.button
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          className="text-[10px] text-white py-2 px-4 rounded-md font-medium transition w-[150px] bg-[var(--primary)] cursor-pointer"
+        >
+          Contact Sales
+        </motion.button>
+      </div>
+    </div>
+
+
   </div>
 );
 
