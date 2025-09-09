@@ -2,11 +2,11 @@
 import Image from 'next/image';
 import React, { FC } from 'react';
 import { motion } from 'framer-motion';
-import Footer from '@/components/Footer/Fotter';
 import ScrollTop from '@/components/Button/ScrollTop';
 import EarthMain from '@/components/Earth/EarthMain';
 import { fadeDown, fadeUp, rotateIn, staggerContainer, zoomIn } from '@/utils/VariantsFade';
 import Navbar from '@/components/Navber/Navbar';
+import Footer from '@/components/Footer/Footer';
 
 interface Feature {
   title: string;

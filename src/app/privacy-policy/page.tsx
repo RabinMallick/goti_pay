@@ -4,12 +4,12 @@ import React from "react";
 import { HiShieldCheck, HiOutlineUserGroup, HiOutlineDeviceTablet, HiOutlineLink, HiOutlineRefresh, HiOutlineMail } from "react-icons/hi";
 import { MdPrivacyTip } from "react-icons/md";
 import { FaLock, FaUserShield, FaDatabase } from 'react-icons/fa';
-import Footer from "@/components/Footer/Fotter";
 import HeroSection from "@/components/Hero/HeroSection";
 import { useSelector } from "react-redux";
 import { RootState } from "@/store/store";
 import Navbar from "@/components/Navber/Navbar";
 import ScrollTop from "@/components/Button/ScrollTop";
+import Footer from "@/components/Footer/Footer";
 
 interface SectionProps {
   title: { en: string; bn: string };

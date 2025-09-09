@@ -1,14 +1,9 @@
 // components/Footer.tsx
+'use client';
+
 import React from "react";
 import { FaFacebookF, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 import { motion } from "framer-motion";
-import {
-  bottomItemVariants,
-  fadeUp,
-  secondItemVariants,
-  staggerContainer,
-  topItemVariants,
-} from "@/utils/VariantsFade";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -28,15 +23,7 @@ const Footer: React.FC = () => {
     },
     {
       title: "Platform APIs",
-      items: [
-        "Platform APIs and Embedded Finance Overview",
-        "Connected Accounts",
-        "Accounts",
-        "Payments",
-        "Transactional FX",
-        "Payouts",
-        "Issuing",
-      ],
+      items: ["Platform APIs and Embedded Finance Overview", "Connected Accounts", "Accounts", "Payments", "Transactional FX", "Payouts", "Issuing"],
     },
     {
       title: "Embedded Finance Use Cases",
@@ -49,18 +36,16 @@ const Footer: React.FC = () => {
     { title: "Developers", items: ["Product Documentation", "API Reference"] },
     {
       title: "Company",
-      items: [
-        "Who we are",
-        "Operating principles",
-        "Terms & Conditions",
-        "Privacy & Policy",
-        "Cookie Preference Centre",
-        "Careers",
-        "Partnership program",
-      ],
+      items: ["Who we are", "Operating principles", "Terms & Conditions", "Privacy & Policy", "Cookie Preference Centre", "Careers", "Partnership program"],
     },
     { title: "Resources", items: ["Blog", "Newsroom", "FAQ", "Support"] },
   ];
+
+  // Simple fade-up animation
+  const fadeUp = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+  };
 
   // Helper to generate URLs
   const generateLink = (item: string) => {
@@ -77,7 +62,6 @@ const Footer: React.FC = () => {
       {/* Top logo and store buttons */}
       <motion.div
         className="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row justify-between items-center gap-4"
-        variants={staggerContainer}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: false, amount: 0.3 }}
@@ -98,17 +82,16 @@ const Footer: React.FC = () => {
       {/* Top row */}
       <motion.div
         className="max-w-7xl mx-auto px-6 py-4 grid grid-cols-1 md:grid-cols-5 gap-8"
-        variants={staggerContainer}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: false, amount: 0.3 }}
       >
         {topCols.map((col, idx) => (
-          <motion.div key={idx} variants={topItemVariants}>
+          <motion.div key={idx} variants={fadeUp}>
             <h4 className="font-bold mb-4">{col.title}</h4>
             <ul className="space-y-2 text-sm">
               {col.items.map((item, i) => (
-                <motion.li key={i} variants={fadeUp} custom={i}>
+                <motion.li key={i} variants={fadeUp}>
                   <Link href={generateLink(item)} className="hover:underline">
                     {item}
                   </Link>
@@ -122,16 +105,15 @@ const Footer: React.FC = () => {
       {/* Second row */}
       <motion.div
         className="max-w-7xl mx-auto px-6 py-6 grid grid-cols-1 md:grid-cols-4 gap-8 border-t border-gray-300 text-sm"
-        variants={staggerContainer}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: false, amount: 0.3 }}
       >
         {secondCols.map((col, idx) => (
-          <motion.div key={idx} variants={secondItemVariants}>
+          <motion.div key={idx} variants={fadeUp}>
             <h4 className="font-bold mb-2">{col.title}</h4>
             {col.items.map((item, i) => (
-              <motion.p key={i} variants={fadeUp} custom={i}>
+              <motion.p key={i} variants={fadeUp}>
                 <Link href={generateLink(item)} className="hover:underline">
                   {item}
                 </Link>
@@ -144,10 +126,10 @@ const Footer: React.FC = () => {
       {/* Bottom row */}
       <motion.div
         className="max-w-7xl mx-auto px-6 py-4 border-t border-gray-300 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500"
-        variants={bottomItemVariants}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: false, amount: 0.2 }}
+        variants={fadeUp}
       >
         <div className="flex items-center gap-2 mb-2 md:mb-0">
           <span>🌐 Global</span>
@@ -156,7 +138,7 @@ const Footer: React.FC = () => {
         <div className="flex items-center gap-4">
           <span>© Gotipay 2025. All rights reserved.</span>
           <span>Sitemap</span>
-          <motion.div className="flex gap-2" variants={fadeUp} custom={2}>
+          <motion.div className="flex gap-2" variants={fadeUp}>
             <FaFacebookF />
             <FaTwitter />
             <FaLinkedinIn />

@@ -1,7 +1,7 @@
 // pages/terms.tsx
 'use client';
 import React from 'react';
-import Footer from '@/components/Footer/Fotter';
+import Footer from '@/components/Footer/Footer';
 import {
   HiOutlineLink,
   HiOutlineRefresh,
