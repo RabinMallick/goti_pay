@@ -40,11 +40,11 @@ const PaymentCardForm: React.FC = () => {
   // Scroll to top on mount
   useEffect(() => window.scrollTo({ top: 0, behavior: 'smooth' }), []);
 
-const toggleAccordion = (index: number, tabId: PaymentTab) => {
-  if (openIndex === index) return; // do nothing if clicked item is already open
-  setOpenIndex(index);             // open the clicked item
-  dispatch(setActiveTab(tabId));
-};
+  const toggleAccordion = (index: number, tabId: PaymentTab) => {
+    if (openIndex === index) return; // do nothing if clicked item is already open
+    setOpenIndex(index);             // open the clicked item
+    dispatch(setActiveTab(tabId));
+  };
 
   const formatTime = (seconds: number) => {
     const m = String(Math.floor(seconds / 60)).padStart(2, '0');
@@ -90,22 +90,22 @@ const toggleAccordion = (index: number, tabId: PaymentTab) => {
 
         {/* Accordion View */}
         {view === 'accordion' && (
-          <div className="w-full max-w-md mx-auto mt-6 space-y-2">
+          <div className="w-full max-w-md mx-auto mt-6 space-y-2 ">
             {tabs.map((tab, index) => {
               const isOpen = openIndex === index;
               return (
-                <div key={tab.id} className="overflow-hidden text-[11px] sm:text-[12px] md:text-[11px] mb-3 md:gap-2">
+                <div key={tab.id} className="overflow-hidden text-[11px] sm:text-[12px] md:text-[11px] mb-3 md:gap-2 mx-3">
 
                   <motion.button
                     whileTap={{ scale: 0.99 }}
-                    className="flex justify-between items-center w-full px-4 py-[10px] bg-gray-100 hover:bg-gray-200 focus:outline-none cursor-pointer"
+                    className={`flex justify-between items-center w-full rounded-md px-4 border py-[10px] bg-gray-100 hover:bg-gray-200 focus:outline-none cursor-pointer ${isOpen ? 'text-black border-[var(--primary)]':'text-gray-400 border-gray-100'}`}
                     onClick={() => toggleAccordion(index, tab.id)}
                   >
                     <div className="flex items-center gap-2">
                       <Image src={tab.icon} alt={tab.label} width={40} height={40} className="w-4 h-4 object-contain" />
                       <span>{`${tab.label}${tab.label !== 'Card' ? 'ing' : ''}`}</span>
                     </div>
-                    {isOpen && <FaRegCircleDot className="w-3 h-3 text-[var(--primary)] transition-transform duration-300" />}
+                    <FaRegCircleDot className={`w-3 h-3  transition-transform duration-300 ${isOpen ? 'text-[var(--primary)]' : 'text-gray-400'}`} />
                   </motion.button>
 
                   <motion.div
@@ -114,7 +114,7 @@ const toggleAccordion = (index: number, tabId: PaymentTab) => {
                     transition={{ duration: 0.3, ease: 'easeInOut' }}
                     className="overflow-hidden"
                   >
-                    <div className="border mx-3 p-2 px-3 md:px-4 rounded-lg border-gray-200 bg-white mt-3">
+                    <div className="border  p-2 px-3 md:px-4 rounded-lg border-gray-200 bg-white mt-3">
                       {tab.content}
                     </div>
                   </motion.div>
