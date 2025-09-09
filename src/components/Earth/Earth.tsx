@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useRef, useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
 import { OrbitControls, Stars } from '@react-three/drei'
 import * as THREE from 'three'
@@ -18,7 +18,7 @@ const latLongToVector3 = (lat: number, lon: number, radius: number) => {
 
 // Earth Mesh
 const EarthMesh: React.FC = () => {
-  const meshRef = useRef<THREE.Mesh>(null!)
+  const meshRef = React.useRef<THREE.Mesh>(null!)
   useFrame(() => {
     if (meshRef.current) meshRef.current.rotation.y += 0.0015
   })
@@ -32,56 +32,71 @@ const EarthMesh: React.FC = () => {
 
 // Country Borders + Fill for Bangladesh
 const CountryBorders: React.FC<{ radius: number }> = ({ radius }) => {
-  const [borders, setBorders] = useState<React.ReactNode[]>([])
+  const [geoData, setGeoData] = useState<any[]>([])
+
   useEffect(() => {
     fetch('https://raw.githubusercontent.com/datasets/geo-countries/master/data/countries.geojson')
       .then((res) => res.json())
-      .then((geojson) => {
-        const elements: React.ReactNode[] = []
+      .then((data) => setGeoData(data.features))
+  }, [])
 
-        geojson.features.forEach((feature: any, i: number) => {
-          const coords = feature.geometry.coordinates
-          const isBangladesh = feature.properties.name === 'Bangladesh'
-          const color = isBangladesh ? 'red' : 'white'
+  const renderPolygon = (polygon: number[][], featureIndex: number, polyIndex: number, color: string, isBangladesh: boolean) => {
+    const points = polygon.map((c) => latLongToVector3(c[1], c[0], radius))
 
-          const drawPolygon = (polygon: any) => {
-            const points: THREE.Vector3[] = polygon.map((c: number[]) =>
-              latLongToVector3(c[1], c[0], radius)
+    const geometry = new THREE.BufferGeometry().setFromPoints(points)
+
+    return (
+      <React.Fragment key={`feature-${featureIndex}-poly-${polyIndex}`}>
+        {/* Border Line */}
+        <line key={`line-${featureIndex}-${polyIndex}`}>
+          <primitive object={geometry} attach="geometry" />
+          <lineBasicMaterial color={color} linewidth={1} />
+        </line>
+
+        {/* Filled Mesh for Bangladesh */}
+        {isBangladesh && (
+          <mesh key={`fill-${featureIndex}-${polyIndex}`}>
+            <primitive
+              object={
+                new THREE.ExtrudeGeometry(
+                  new THREE.Shape(points.map((v) => new THREE.Vector2(v.x, v.z))),
+                  { depth: 0.01, bevelEnabled: false }
+                )
+              }
+              attach="geometry"
+            />
+            <meshBasicMaterial color={color} transparent opacity={0.5} />
+          </mesh>
+        )}
+      </React.Fragment>
+    )
+  }
+
+  return (
+    <group>
+      {geoData.map((feature, featureIndex) => {
+        const coords = feature.geometry.coordinates
+        const isBangladesh = feature.properties.name === 'Bangladesh'
+        const color = isBangladesh ? 'red' : 'white'
+
+        if (feature.geometry.type === 'Polygon') {
+          return coords.map((polygon: number[][], polyIndex: number) =>
+            renderPolygon(polygon, featureIndex, polyIndex, color, isBangladesh)
+          )
+        }
+
+        if (feature.geometry.type === 'MultiPolygon') {
+          return coords.map((multi: number[][][], polyIndex: number) =>
+            multi.map((polygon: number[][], subIndex: number) =>
+              renderPolygon(polygon, featureIndex, polyIndex * 100 + subIndex, color, isBangladesh)
             )
-            // Draw border
-            const geometry = new THREE.BufferGeometry().setFromPoints(points)
-            elements.push(
-              <line key={i + '-line'}>
-                <primitive object={geometry} attach="geometry" />
-                <lineBasicMaterial color={color} linewidth={1} />
-              </line>
-            )
-            // Draw filled mesh if Bangladesh
-            if (isBangladesh) {
-              const shape = new THREE.Shape(points.map((v) => new THREE.Vector2(v.x, v.z)))
-              const geom = new THREE.ExtrudeGeometry(shape, { depth: 0.01, bevelEnabled: false })
-              elements.push(
-                <mesh key={i + '-fill'}>
-                  <primitive object={geom} attach="geometry" />
-                  <meshBasicMaterial color={color} transparent opacity={0.5} />
-                </mesh>
-              )
-            }
-          }
+          )
+        }
 
-          if (feature.geometry.type === 'Polygon') {
-            coords.forEach(drawPolygon)
-          }
-
-          if (feature.geometry.type === 'MultiPolygon') {
-            coords.forEach((multi: any) => multi.forEach(drawPolygon))
-          }
-        })
-        setBorders(elements)
-      })
-  }, [radius])
-
-  return <group>{borders}</group>
+        return null
+      })}
+    </group>
+  )
 }
 
 // Main Earth Component
