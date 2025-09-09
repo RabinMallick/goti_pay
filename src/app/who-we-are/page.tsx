@@ -11,7 +11,7 @@ import { RootState } from "@/store/store";
 import Navbar from "@/components/Navber/Navbar";
 import ScrollTop from "@/components/Button/ScrollTop";
 import Footer from "@/components/Footer/Footer";
-import privacyData from '@/data/privacy.json';
+import aboutusData from '@/data/aboutus.json';
 import clsx from 'clsx';
 
 const renderContent = (text: string) => {
@@ -63,7 +63,7 @@ const renderContent = (text: string) => {
   return parts;
 };
 
-const PrivacyPolicy: React.FC = () => {
+const AboutUs: React.FC = () => {
   const language = useSelector((state: RootState) => state.language.value);
   const icons = [FaLock, FaUserShield, FaDatabase, MdPrivacyTip, HiOutlineUserGroup, HiOutlineLink, HiOutlineRefresh, HiOutlineMail];
 
@@ -86,17 +86,19 @@ const PrivacyPolicy: React.FC = () => {
         <Navbar />
 
         {/* Hero Section */}
-        <HeroSection
-          icons={icons}
-          title={language === 'en' ? "Your Privacy, Our Commitment" : "আপনার গোপনীয়তা, আমাদের প্রতিশ্রুতি"}
-          description={language === 'en'
-            ? "Learn how we collect, use, and protect your personal information responsibly."
-            : "কিভাবে আমরা আপনার ব্যক্তিগত তথ্য সংগ্রহ, ব্যবহার এবং সুরক্ষিত রাখি তা জানুন।"}
-        />
+       {/* Hero Section for About Us */}
+<HeroSection
+  icons={icons} // আপনি চাইলে About page এর জন্য আলাদা icons রাখতে পারেন
+  title={language === 'en' ? "About Us" : "আমাদের সম্পর্কে"}
+  description={language === 'en'
+    ? "Welcome to GotiPay, your trusted partner in seamless and secure digital payments. Learn about our vision, mission, and how we empower Bangladeshis digitally."
+    : "GotiPay তে আপনাকে স্বাগতম, আপনার নির্ভরযোগ্য ডিজিটাল পেমেন্ট পার্টনার। আমাদের ভিশন, মিশন এবং কিভাবে আমরা বাংলাদেশীদের ডিজিটালি ক্ষমতায়ন করি তা জানুন।"}
+/>
+
 
         {/* Privacy Content Section */}
         <section className="max-w-5xl mx-auto px-6 py-16 space-y-10">
-          {privacyData.map((section, idx) => {
+          {aboutusData.map((section, idx) => {
             const Icon = Icons[section.icon as keyof typeof Icons] as React.ComponentType<{ className?: string }>;
             return (
               <div key={idx} className="mb-10">
@@ -130,4 +132,4 @@ const PrivacyPolicy: React.FC = () => {
   );
 };
 
-export default PrivacyPolicy;
+export default AboutUs;

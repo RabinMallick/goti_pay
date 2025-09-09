@@ -112,10 +112,10 @@ const TermsConditions: React.FC = () => {
             return (
               <div key={idx} className="mb-10">
                 <div className="flex items-center gap-3 mb-3">
-                  <Icon className={`${colorMap[section.color] || 'text-gray-500'} text-2xl`} />
-                  <h2 className="text-xl font-bold">{section.title[language]}</h2>
+                  <Icon className={`${colorMap[section.color] || 'text-gray-500'} text-xl`} />
+                  <h2 className="text-sm md:text-md font-bold">{section.title[language]}</h2>
                 </div>
-                <div className="space-y-2 text-gray-700 text-sm">
+                <div className="space-y-2 text-gray-700 text-[12px] md:text-[14px]">
                   {section.content[language].map((p, i) => {
                     const bulletMatch = p.match(/^•\s*(.*)$/);
                     if (bulletMatch) {

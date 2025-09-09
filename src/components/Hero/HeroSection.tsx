@@ -56,7 +56,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
       >
         <div className="text-center md:text-left">
           <motion.h1
-            className="text-2xl md:text-3xl font-extrabold text-white mb-4 drop-shadow-lg"
+            className="text-xl md:text-2xl font-extrabold text-white mb-4 drop-shadow-lg"
             variants={staggerContainer}
             initial="hidden"
             whileInView="visible"
