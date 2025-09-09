@@ -3,6 +3,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import Tooltip from '@/components/Tooltip/Tooltip';
 
 interface BankCard {
   name: string;
@@ -22,38 +23,15 @@ interface Plan {
   netRate: string;
 }
 
-interface TooltipProps {
-  text: string;
-  children: React.ReactNode;
-}
-
-const Tooltip: React.FC<TooltipProps> = ({ text, children }) => {
-  const [show, setShow] = React.useState(false);
-  return (
-    <div
-      className="relative flex items-center"
-      onMouseEnter={() => setShow(true)}
-      onMouseLeave={() => setShow(false)}
-    >
-      {children}
-      {show && (
-        <div className="absolute z-10 -top-10 left-1/2 transform -translate-x-1/2 px-3 py-1 bg-gray-900 text-white text-xs rounded shadow-lg whitespace-nowrap">
-          {text}
-          <div className="absolute bottom-[-5px] left-1/2 transform -translate-x-1/2 w-2 h-2 bg-gray-900 rotate-45"></div>
-        </div>
-      )}
-    </div>
-  );
-};
 
 const plans: Plan[] = [
   {
-    name: 'Goti Growth',
+    name: 'Goti Lite',
     color: 'bg-zinc-100 text-zinc-400',
     buttonColor: 'bg-zinc-400 hover:bg-zinc-400',
     debitCards: [
-      { name: 'Visa', img: '/visa.svg' },
-      { name: 'MasterCard', img: '/master.svg' },
+      { name: 'Visa Card', img: '/visa.svg' },
+      { name: 'Master Card', img: '/master.svg' },
       { name: 'Amex', img: '/amex.svg' },
       { name: 'Union Pay', img: '/unionpay.svg' },
     ],
@@ -81,8 +59,8 @@ const plans: Plan[] = [
     color: 'bg-violet-100 text-violet-500',
     buttonColor: 'bg-violet-500 hover:bg-violet-600',
     debitCards: [
-      { name: 'Visa', img: '/visa.svg' },
-      { name: 'MasterCard', img: '/master.svg' },
+      { name: 'Visa Card', img: '/visa.svg' },
+      { name: 'Master Card', img: '/master.svg' },
       { name: 'Amex', img: '/amex.svg' },
       { name: 'Union Pay', img: '/unionpay.svg' },
     ],
@@ -109,8 +87,8 @@ const plans: Plan[] = [
     color: 'bg-orange-100 text-orange-500',
     buttonColor: 'bg-orange-500 hover:bg-orange-600',
     debitCards: [
-      { name: 'Visa', img: '/visa.svg' },
-      { name: 'MasterCard', img: '/master.svg' },
+      { name: 'Visa Card', img: '/visa.svg' },
+      { name: 'Master Card', img: '/master.svg' },
       { name: 'Amex', img: '/amex.svg' },
       { name: 'Union Pay', img: '/unionpay.svg' },
     ],
@@ -154,7 +132,7 @@ const PaymentSection: React.FC<{
     <h4 className="font-normal mb-2 text-xs md:text-[0.85rem] text-gray-600">{title}</h4>
     <div className="grid grid-cols-12 items-center">
       <div className="flex col-span-7 gap-1 flex-wrap ">{items.map(card => (
-        <Tooltip key={card.name} text={card.name}>
+        <Tooltip key={card.name} text={card.name}  >
           <motion.div
             whileHover={{ scale: 1.1 }}
             className="w-10 h-6 relative cursor-pointer bg-gray-50 border border-gray-50"
@@ -181,12 +159,12 @@ const PaymentSection: React.FC<{
 );
 
 const PaymentPlans: React.FC = () => (
-  <div className="py-16 bg-gray-50">
+  <div className="py-6 sm:py-16 bg-gray-50">
     <div className="text-center mb-12">
-      <motion.h2 initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="text-xs sm:text-3xl font-bold">
+      <motion.h2 initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="text-lg sm:text-3xl font-bold">
         Sell Domestic and Worldwide Without a Hassle
       </motion.h2>
-      <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3, duration: 0.6 }} className="text-gray-600 mt-2 text-[10px] sm:text-lg">
+      <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3, duration: 0.6 }} className="text-gray-600 mt-2 text-xs sm:text-lg">
         Compare Plans and Choose the Best Payment Solution for You
       </motion.p>
     </div>
