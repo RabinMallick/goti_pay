@@ -1,5 +1,7 @@
-import React, { FC, useEffect, useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+"use client";
+
+import React, { FC, useEffect, useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 interface ScrollState {
   scrolled: boolean;
@@ -11,18 +13,22 @@ const ScrollTop: FC = () => {
     scrolled: false,
     percent: 0,
   });
+  const [mounted, setMounted] = useState(false); // new
 
   useEffect(() => {
+    setMounted(true); // mark as mounted
+
     const handleScroll = () => {
       const scrollTop = window.scrollY;
-      const docHeight =
-        document.documentElement.scrollHeight - window.innerHeight;
-      const percent = (scrollTop / docHeight) * 100;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const percent = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+
       setScroll({ scrolled: scrollTop > 50, percent });
     };
 
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
+    handleScroll(); 
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const radius = 24;
@@ -31,12 +37,11 @@ const ScrollTop: FC = () => {
 
   return (
     <AnimatePresence>
-      {scroll.scrolled && (
+      {mounted && scroll.scrolled && ( // only render after mounted
         <motion.button
-          onClick={() =>
-            window.scrollTo({ top: 0, behavior: 'smooth' })
-          }
-          className="fixed bottom-5 right-5 w-10 h-10  md:w-14 md:h-14 flex items-center justify-center rounded-full bg-[var(--primary)] text-white shadow-lg hover:bg-indigo-700 z-50 cursor-pointer"
+          aria-label="Scroll to top"
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          className="fixed bottom-10 md:bottom-5 right-5 w-10 h-10 md:w-12 md:h-12 flex items-center justify-center rounded-full bg-[var(--primary)] text-white shadow-lg hover:bg-indigo-700 z-50 cursor-pointer"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
           initial={{ opacity: 0, y: 20 }}
@@ -44,13 +49,7 @@ const ScrollTop: FC = () => {
           exit={{ opacity: 0, y: 20 }}
           transition={{ duration: 0.3 }}
         >
-          {/* Circular progress */}
-          <svg
-            className="absolute top-0 left-0 w-full h-full"
-            width="56"
-            height="56"
-            viewBox="0 0 56 56"
-          >
+          <svg className="absolute top-0 left-0 w-full h-full" viewBox="0 0 56 56">
             <circle
               cx="28"
               cy="28"

@@ -1,6 +1,6 @@
 // pages/terms.tsx
 'use client';
-import React, { useState } from 'react';
+import React from 'react';
 import Footer from '@/components/Footer/Fotter';
 import {
   HiOutlineLink,
@@ -14,6 +14,7 @@ import HeroSection from '@/components/Hero/HeroSection';
 import { RootState } from '@/store/store';
 import { useSelector } from 'react-redux';
 import Navbar from '@/components/Navber/Navbar';
+import ScrollTop from '@/components/Button/ScrollTop';
 
 interface SectionProps {
   title: { en: string; bn: string };
@@ -62,7 +63,7 @@ const TermsConditions: React.FC = () => {
       <div className="min-h-screen bg-gray-50 text-gray-800">
 
         <Navbar />
-        
+
         {/* Hero Section */}
         <HeroSection
           icons={icons}
@@ -255,6 +256,8 @@ const TermsConditions: React.FC = () => {
         </section>
       </div>
       <Footer />
+
+      <ScrollTop />
     </>
   );
 };

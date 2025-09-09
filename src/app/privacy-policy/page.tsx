@@ -9,6 +9,7 @@ import HeroSection from "@/components/Hero/HeroSection";
 import { useSelector } from "react-redux";
 import { RootState } from "@/store/store";
 import Navbar from "@/components/Navber/Navbar";
+import ScrollTop from "@/components/Button/ScrollTop";
 
 interface SectionProps {
   title: { en: string; bn: string };
@@ -41,7 +42,7 @@ const PrivacyPolicy: React.FC = () => {
       <div className="min-h-screen bg-gray-50 text-gray-800">
 
         <Navbar />
-        
+
         {/* Hero Section */}
         <HeroSection
           icons={icons}
@@ -152,6 +153,8 @@ const PrivacyPolicy: React.FC = () => {
         </section>
       </div>
       <Footer />
+
+      <ScrollTop />
     </>
   );
 };
