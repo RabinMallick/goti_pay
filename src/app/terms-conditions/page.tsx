@@ -2,49 +2,44 @@
 'use client';
 import React from 'react';
 import termsData from '@/data/terms.json';
-import {
-  HiOutlineLink,
-  HiOutlineRefresh,
-  HiOutlineMail,
-  HiOutlineDocumentText,
-  HiOutlineCreditCard,
-  HiOutlineShieldCheck,
-  HiOutlineXCircle,
-  HiOutlineShieldExclamation,
-  HiOutlineExclamationCircle,
-  HiOutlineInformationCircle,
-  HiOutlineBan,
-  HiOutlineGlobeAlt,
-  
-} from 'react-icons/hi';
+import * as Icons from 'react-icons/hi';
 import HeroSection from '@/components/Hero/HeroSection';
 import { RootState } from '@/store/store';
 import { useSelector } from 'react-redux';
 import Navbar from '@/components/Navber/Navbar';
 import ScrollTop from '@/components/Button/ScrollTop';
 import Footer from '@/components/Footer/Footer';
-import * as Icons from 'react-icons/hi';
 
 const TermsConditions: React.FC = () => {
   const language = useSelector((state: RootState) => state.language.value);
 
   const icons = [
-    HiOutlineDocumentText,
-    HiOutlineCreditCard,
-    HiOutlineShieldCheck,
-    HiOutlineLink,
-    HiOutlineRefresh,
-    HiOutlineMail,
-    HiOutlineXCircle,
-    HiOutlineShieldExclamation,
-    HiOutlineExclamationCircle,
-    HiOutlineInformationCircle,
-    HiOutlineBan,
-    HiOutlineGlobeAlt,
-    
+    Icons.HiOutlineDocumentText,
+    Icons.HiOutlineCreditCard,
+    Icons.HiOutlineShieldCheck,
+    Icons.HiOutlineLink,
+    Icons.HiOutlineRefresh,
+    Icons.HiOutlineMail,
+    Icons.HiOutlineXCircle,
+    Icons.HiOutlineShieldExclamation,
+    Icons.HiOutlineExclamationCircle,
+    Icons.HiOutlineInformationCircle,
+    Icons.HiOutlineBan,
+    Icons.HiOutlineGlobeAlt,
   ];
 
-  // ফাংশন যা ইমেইল ও URL কে link এ রূপান্তর করবে
+  const colorMap: Record<string, string> = {
+    gray: "text-gray-500",
+    blue: "text-blue-500",
+    indigo: "text-indigo-500",
+    green: "text-green-500",
+    yellow: "text-yellow-500",
+    red: "text-red-500",
+    purple: "text-purple-500",
+    pink: "text-pink-500",
+    teal: "text-teal-500"
+  };
+
   const renderContent = (text: string) => {
     const emailRegex = /([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})/g;
     const urlRegex = /(https?:\/\/[^\s]+)/g;
@@ -117,13 +112,22 @@ const TermsConditions: React.FC = () => {
             return (
               <div key={idx} className="mb-10">
                 <div className="flex items-center gap-3 mb-3">
-                  <Icon className={`text-${section.color}-500`} />
-                  <h2 className="text-1xl font-bold">{section.title[language]}</h2>
+                  <Icon className={`${colorMap[section.color] || 'text-gray-500'} text-2xl`} />
+                  <h2 className="text-xl font-bold">{section.title[language]}</h2>
                 </div>
-                <div className="space-y-2 text-gray-700 text-[14px]">
-                  {section.content[language].map((p, i) => (
-                    <p key={i}>{renderContent(p)}</p>
-                  ))}
+                <div className="space-y-2 text-gray-700 text-sm">
+                  {section.content[language].map((p, i) => {
+                    const bulletMatch = p.match(/^•\s*(.*)$/);
+                    if (bulletMatch) {
+                      return (
+                        <p key={i} className="ml-4">
+                          <span className="font-bold">• </span>
+                          {renderContent(bulletMatch[1])}
+                        </p>
+                      );
+                    }
+                    return <p key={i}>{renderContent(p)}</p>;
+                  })}
                 </div>
               </div>
             );
