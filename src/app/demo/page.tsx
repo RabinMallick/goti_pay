@@ -2,57 +2,56 @@
 
 import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import DebitOrCredit from '@/components/UI/payement-gateway/DebitOrCredit';
 import MoblieBanking from '@/components/UI/payement-gateway/MoblieBanking';
 import NetBanking from '@/components/UI/payement-gateway/NetBanking';
 import { IoChevronBack } from "react-icons/io5";
-
+import { FaRegCircleDot } from "react-icons/fa6";
 import { useSelector, useDispatch } from 'react-redux';
 import { AppDispatch, RootState } from '@/store/store';
 import { PaymentTab, setActiveTab } from '@/store/slice/paymentSlice';
 import { useRouter } from 'next/navigation';
 
 const tabs = [
-  { id: 'card', label: 'Card', icon: '/card.svg' },
-  { id: 'mobile', label: 'Mobile Bank', icon: '/mfs.svg' },
-  { id: 'net', label: 'Net Bank', icon: '/bank.svg' },
+  { id: 'card', label: 'Card', icon: '/card.svg', content: <DebitOrCredit /> },
+  { id: 'mobile', label: 'Mobile Bank', icon: '/mfs.svg', content: <MoblieBanking /> },
+  { id: 'net', label: 'Net Bank', icon: '/bank.svg', content: <NetBanking /> },
 ] as const;
 
 const PaymentCardForm: React.FC = () => {
   const dispatch = useDispatch<AppDispatch>();
-  const activeTab = useSelector((state: RootState) => state.payment.activeTab);
   const router = useRouter();
-  const [timeLeft, setTimeLeft] = useState(600); // 1 minute in seconds
+  const activeTab = useSelector((state: RootState) => state.payment.activeTab);
 
-  // Countdown effect
+  const [timeLeft, setTimeLeft] = useState(600); // 10 minutes
+  const [openIndex, setOpenIndex] = useState(0); // first accordion open by default
+
+  // View mode: 'accordion' or 'tab'
+  const view: string = 'accordion';
+
+  // Timer
   useEffect(() => {
-    if (timeLeft <= 0) return; // Stop when it reaches 0
-    const timer = setInterval(() => {
-      setTimeLeft((prev) => prev - 1);
-    }, 1000);
-
+    if (timeLeft <= 0) return;
+    const timer = setInterval(() => setTimeLeft(prev => prev - 1), 1000);
     return () => clearInterval(timer);
   }, [timeLeft]);
 
-  const handleTabClick = (tab: PaymentTab) => {
-    dispatch(setActiveTab(tab));
-  };
+  // Scroll to top on mount
+  useEffect(() => window.scrollTo({ top: 0, behavior: 'smooth' }), []);
 
-  // Format time as MM:SS
+const toggleAccordion = (index: number, tabId: PaymentTab) => {
+  if (openIndex === index) return; // do nothing if clicked item is already open
+  setOpenIndex(index);             // open the clicked item
+  dispatch(setActiveTab(tabId));
+};
+
   const formatTime = (seconds: number) => {
-    const m = Math.floor(seconds / 60)
-      .toString()
-      .padStart(2, '0');
-    const s = (seconds % 60).toString().padStart(2, '0');
+    const m = String(Math.floor(seconds / 60)).padStart(2, '0');
+    const s = String(seconds % 60).padStart(2, '0');
     return `${m}:${s}`;
   };
 
-
-  useEffect(() => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  }, []);
-  
   return (
     <motion.div
       className="flex justify-center min-h-screen bg-gray-100 p-0 md:p-6"
@@ -66,10 +65,8 @@ const PaymentCardForm: React.FC = () => {
         transition={{ duration: 0.4, ease: "easeInOut" }}
       >
         {/* Header */}
-        <div className="text-center p-4 px-0">
-          <center>
-            <Image src="/logo.svg" alt="logo" width={100} height={20} />
-          </center>
+        <div className="text-center p-4 px-0 relative">
+          <Image src="/logo.svg" alt="logo" width={100} height={20} className="mx-auto" />
           <p className="text-gray-600 text-xs mt-2 leading-4">
             GotiPay Limited <br />
             <small>4th Floor, 100/A Shukrabad, Dhanmondi, Dhaka-1216</small>
@@ -91,49 +88,77 @@ const PaymentCardForm: React.FC = () => {
           {formatTime(timeLeft)}
         </div>
 
-        {/* Tabs */}
-        <div className="flex text-[11px] sm:text-[12px] md:text-[11px] mb-3 mx-4 gap-1 md:gap-2">
-          {tabs.map((tab) => (
-            <motion.label
-              key={tab.id}
-              whileTap={{ scale: 0.97 }}
-              className={`flex-1 flex items-center justify-between border rounded-sm ps-2 pe-1 py-1 cursor-pointer relative transition-colors duration-300
-                ${activeTab === tab.id ? 'text-black border-[var(--primary)]' : 'text-gray-400 border-gray-100'}`}
-              onClick={() => handleTabClick(tab.id)}
-            >
-              <div className="flex items-center gap-1 w-full">
-                <Image
-                  src={tab.icon}
-                  alt={tab.label}
-                  width={40}
-                  height={40}
-                  className="w-4 h-4 object-contain"
-                />
-                {tab.label}
-                {activeTab === tab.id && (
-                  <motion.input
-                    type="radio"
-                    name="paymentTab"
-                    checked
-                    readOnly
-                    className="form-radio h-[9px] w-[9px] accent-[var(--primary)] absolute top-[6.5px] right-1"
-                    initial={{ scale: 0 }}
-                    animate={{ scale: 1 }}
-                  />
-                )}
-              </div>
-            </motion.label>
-          ))}
-        </div>
+        {/* Accordion View */}
+        {view === 'accordion' && (
+          <div className="w-full max-w-md mx-auto mt-6 space-y-2">
+            {tabs.map((tab, index) => {
+              const isOpen = openIndex === index;
+              return (
+                <div key={tab.id} className="overflow-hidden text-[11px] sm:text-[12px] md:text-[11px] mb-3 md:gap-2">
 
-        {/* Tab Content */}
-        <div className="border mx-4 p-2 px-3 md:px-4 rounded-lg border-gray-200 bg-white">
-          <AnimatePresence mode="wait">
-            {activeTab === 'card' && <DebitOrCredit />}
-            {activeTab === 'mobile' && <MoblieBanking />}
-            {activeTab === 'net' && <NetBanking />}
-          </AnimatePresence>
-        </div>
+                  <motion.button
+                    whileTap={{ scale: 0.99 }}
+                    className="flex justify-between items-center w-full px-4 py-[10px] bg-gray-100 hover:bg-gray-200 focus:outline-none cursor-pointer"
+                    onClick={() => toggleAccordion(index, tab.id)}
+                  >
+                    <div className="flex items-center gap-2">
+                      <Image src={tab.icon} alt={tab.label} width={40} height={40} className="w-4 h-4 object-contain" />
+                      <span>{`${tab.label}${tab.label !== 'Card' ? 'ing' : ''}`}</span>
+                    </div>
+                    {isOpen && <FaRegCircleDot className="w-3 h-3 text-[var(--primary)] transition-transform duration-300" />}
+                  </motion.button>
+
+                  <motion.div
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: isOpen ? 'auto' : 0, opacity: isOpen ? 1 : 0 }}
+                    transition={{ duration: 0.3, ease: 'easeInOut' }}
+                    className="overflow-hidden"
+                  >
+                    <div className="border mx-3 p-2 px-3 md:px-4 rounded-lg border-gray-200 bg-white mt-3">
+                      {tab.content}
+                    </div>
+                  </motion.div>
+                </div>
+              );
+            })}
+          </div>
+        )}
+
+        {/* Tab View */}
+        {view === 'tab' && (
+          <>
+            <div className="flex text-[11px] sm:text-[12px] md:text-[11px] mb-3 mx-4 gap-1 md:gap-2">
+              {tabs.map(tab => (
+                <motion.label
+                  key={tab.id}
+                  whileTap={{ scale: 0.97 }}
+                  className={`flex-1 flex items-center justify-between border rounded-sm ps-2 pe-1 py-1 cursor-pointer relative transition-colors duration-300
+                    ${activeTab === tab.id ? 'text-black border-[var(--primary)]' : 'text-gray-400 border-gray-100'}`}
+                  onClick={() => dispatch(setActiveTab(tab.id))}
+                >
+                  <div className="flex items-center gap-1 w-full">
+                    <Image src={tab.icon} alt={tab.label} width={40} height={40} className="w-4 h-4 object-contain" />
+                    {tab.label}
+                    {activeTab === tab.id && (
+                      <motion.input
+                        type="radio"
+                        name="paymentTab"
+                        checked
+                        readOnly
+                        className="form-radio h-[9px] w-[9px] accent-[var(--primary)] absolute top-[6.5px] right-1"
+                        initial={{ scale: 0 }}
+                        animate={{ scale: 1 }}
+                      />
+                    )}
+                  </div>
+                </motion.label>
+              ))}
+            </div>
+            <div className="border mx-4 p-2 px-3 md:px-4 rounded-lg border-gray-200 bg-white">
+              {tabs.find(tab => tab.id === activeTab)?.content}
+            </div>
+          </>
+        )}
       </motion.div>
     </motion.div>
   );
