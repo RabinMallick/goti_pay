@@ -41,52 +41,62 @@ const TermsConditions: React.FC = () => {
   };
 
   const renderContent = (text: string) => {
+    const highlightText = "GotiPay Ltd.";
     const emailRegex = /([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})/g;
     const urlRegex = /(https?:\/\/[^\s]+)/g;
 
     let parts: (string | React.ReactElement)[] = [];
     let lastIndex = 0;
 
-    const combinedRegex = new RegExp(`${emailRegex.source}|${urlRegex.source}`, 'g');
+    // Highlight GotiPay Ltd.
+    const highlightRegex = new RegExp(highlightText, "g");
     let match;
-    while ((match = combinedRegex.exec(text)) !== null) {
+    while ((match = highlightRegex.exec(text)) !== null) {
       if (match.index > lastIndex) {
         parts.push(text.substring(lastIndex, match.index));
       }
-
-      const matchedText = match[0];
-      if (emailRegex.test(matchedText)) {
-        parts.push(
-          <a
-            key={match.index}
-            href={`mailto:${matchedText}`}
-            className="text-blue-600 underline hover:text-blue-800"
-          >
-            {matchedText}
-          </a>
-        );
-      } else if (urlRegex.test(matchedText)) {
-        parts.push(
-          <a
-            key={match.index}
-            href={matchedText}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-blue-600 underline hover:text-blue-800"
-          >
-            {matchedText}
-          </a>
-        );
-      }
-
-      lastIndex = match.index + matchedText.length;
+      parts.push(
+        <span key={match.index} className="bg-yellow-100 font-semibold">
+          {highlightText}
+        </span>
+      );
+      lastIndex = match.index + highlightText.length;
     }
-
     if (lastIndex < text.length) {
       parts.push(text.substring(lastIndex));
     }
 
-    return parts;
+    // Handle emails and URLs inside each part
+    return parts.map((part, idx) => {
+      if (typeof part === "string") {
+        let subParts: (string | React.ReactElement)[] = [];
+        let last = 0;
+        const combinedRegex = new RegExp(`${emailRegex.source}|${urlRegex.source}`, 'g');
+        let m;
+        while ((m = combinedRegex.exec(part)) !== null) {
+          if (m.index > last) subParts.push(part.substring(last, m.index));
+
+          const matchedText = m[0];
+          if (emailRegex.test(matchedText)) {
+            subParts.push(
+              <a key={idx + m.index} href={`mailto:${matchedText}`} className="text-blue-600 underline hover:text-blue-800">
+                {matchedText}
+              </a>
+            );
+          } else if (urlRegex.test(matchedText)) {
+            subParts.push(
+              <a key={idx + m.index} href={matchedText} target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-800">
+                {matchedText}
+              </a>
+            );
+          }
+          last = m.index + matchedText.length;
+        }
+        if (last < part.length) subParts.push(part.substring(last));
+        return <React.Fragment key={idx}>{subParts}</React.Fragment>;
+      }
+      return part;
+    });
   };
 
   return (
