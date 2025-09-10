@@ -1,23 +1,154 @@
 [
   {
+    "icon": "HiOutlineUserGroup",
+    "color": "blue",
     "title": {
       "en": "About Us",
       "bn": "আমাদের সম্পর্কে"
     },
     "content": {
       "en": [
-        "Welcome to GotiPay, your trusted partner in seamless and secure digital payments. As GotiPay Ltd. from Bangladesh, we are driven by a singular vision: to revolutionize the way individuals and businesses interact with their finances, making transactions simpler, faster, and more accessible for everyone within Bangladesh and beyond.",
-        "In an increasingly interconnected world, the need for reliable and efficient payment solutions has never been more critical. We recognized this imperative and embarked on a journey to build a platform that not only meets but exceeds the evolving demands of the modern financial landscape.",
-        "Our story began with a deep understanding of the challenges faced by both consumers and merchants in traditional payment systems within Bangladesh. Long queues, cumbersome paperwork, security concerns, and limited accessibility were common pain points that inspired us to innovate. We assembled a team of passionate experts, comprising seasoned technologists, financial strategists, and customer experience specialists, all united by a shared commitment to redefine digital payments. From the outset, our focus has been on creating a user-centric ecosystem that prioritizes convenience, security, and transparency, specifically tailored for the Bangladeshi market while adhering to international best practices.",
-        "At the heart of GotiPay's philosophy is the belief that financial services should be inclusive and empowering for all Bangladeshis. We strive to bridge the gap between conventional banking and the digital age, offering a comprehensive suite of services that cater to a diverse range of needs across the country. Whether you are an individual looking for a hassle-free way to send money to loved ones, a small business seeking to streamline your payment collection process, or a large enterprise aiming to optimize your financial operations, GotiPay provides tailored solutions designed to foster growth and efficiency.",
-        "Our platform is built on a foundation of cutting-edge technology, ensuring that every transaction is processed with the highest levels of security and speed. We employ robust encryption protocols, multi-factor authentication, and continuous fraud monitoring to safeguard your financial data and provide you with peace of mind. Beyond security, we are committed to delivering an intuitive and seamless user experience. Our mobile application and web interface are designed with simplicity in mind, allowing you to navigate through various features effortlessly, from making payments and managing accounts to tracking transaction history and accessing detailed reports.",
-        "Innovation is a cornerstone of our identity. We are constantly exploring new technologies and methodologies to enhance our services and stay ahead of industry trends. Our dedicated research and development team works tirelessly to integrate the latest advancements in fintech, ensuring that GotiPay remains at the forefront of digital payment solutions."
+        "Welcome to GotiPay, your trusted partner in seamless and secure digital payments.",
+        "As GotiPay Ltd. from Bangladesh, we are driven by a singular vision: to revolutionize the way individuals and businesses interact with their finances, making transactions simpler, faster, and more accessible for everyone within Bangladesh and beyond.",
+        "In an increasingly interconnected world, the need for reliable and efficient payment solutions has never been more critical. We recognized this imperative and embarked on a journey to build a platform that not only meets but exceeds the evolving demands of the modern financial landscape."
       ],
       "bn": [
-        ""
+        "GotiPay এ আপনাকে স্বাগতম, আপনার নির্ভরযোগ্য ও নিরাপদ ডিজিটাল পেমেন্ট পার্টনার।",
+        "বাংলাদেশের GotiPay Ltd. একটি বিশেষ ভিশন নিয়ে কাজ করছে: মানুষের ও ব্যবসার অর্থ ব্যবস্থাপনাকে আরও সহজ, দ্রুত ও সবার জন্য সহজলভ্য করা।",
+        "আজকের আন্তঃসংযুক্ত বিশ্বে নির্ভরযোগ্য ও কার্যকরী পেমেন্ট সমাধান আগের যেকোনো সময়ের চেয়ে গুরুত্বপূর্ণ। এই প্রয়োজনীয়তা উপলব্ধি করেই আমরা এমন একটি প্ল্যাটফর্ম তৈরি করেছি যা আধুনিক আর্থিক ব্যবস্থার চাহিদাকে অতিক্রম করে।"
       ]
+    }
+  },
+  {
+    "icon": "HiOutlineLink",
+    "color": "indigo",
+    "title": {
+      "en": "Our Story",
+      "bn": "আমাদের গল্প"
     },
-    "icon": "HiOutlineInformationCircle",
-    "color": "blue"
+    "content": {
+      "en": [
+        "Our story began with a deep understanding of the challenges faced by both consumers and merchants in traditional payment systems within Bangladesh.",
+        "Long queues, cumbersome paperwork, security concerns, and limited accessibility were common pain points that inspired us to innovate.",
+        "We assembled a team of passionate experts, comprising seasoned technologists, financial strategists, and customer experience specialists, all united by a shared commitment to redefine digital payments."
+      ],
+      "bn": [
+        "আমাদের গল্প শুরু হয়েছিল বাংলাদেশে প্রচলিত পেমেন্ট সিস্টেমে ভোক্তা ও ব্যবসায়ীদের সমস্যাগুলি গভীরভাবে বোঝার মাধ্যমে।",
+        "দীর্ঘ লাইন, জটিল কাগজপত্র, নিরাপত্তা উদ্বেগ ও সীমিত অ্যাক্সেসিবিলিটি আমাদের নতুন কিছু করতে অনুপ্রাণিত করেছে।",
+        "আমরা অভিজ্ঞ টেকনোলজিস্ট, আর্থিক বিশেষজ্ঞ এবং গ্রাহক অভিজ্ঞতা বিশেষজ্ঞদের নিয়ে একটি দল গঠন করেছি যারা একসাথে ডিজিটাল পেমেন্টকে নতুনভাবে সংজ্ঞায়িত করতে কাজ করছে।"
+      ]
+    }
+  },
+  {
+    "icon": "HiOutlineRefresh",
+    "color": "green",
+    "title": {
+      "en": "Our Philosophy",
+      "bn": "আমাদের দর্শন"
+    },
+    "content": {
+      "en": [
+        "At the heart of GotiPay's philosophy is the belief that financial services should be inclusive and empowering for all Bangladeshis.",
+        "We strive to bridge the gap between conventional banking and the digital age, offering a comprehensive suite of services that cater to a diverse range of needs across the country.",
+        "Whether you are an individual, a small business, or a large enterprise, GotiPay provides tailored solutions designed to foster growth and efficiency."
+      ],
+      "bn": [
+        "GotiPay এর দর্শনের মূল ভিত্তি হলো – আর্থিক সেবা যেন সবার জন্য অন্তর্ভুক্তিমূলক এবং ক্ষমতায়নকারী হয়।",
+        "আমরা প্রচলিত ব্যাংকিং এবং ডিজিটাল যুগের মধ্যে ফাঁক পূরণ করার চেষ্টা করি, যেখানে দেশের বৈচিত্র্যময় চাহিদা অনুযায়ী সমন্বিত সেবা দেওয়া হয়।",
+        "আপনি ব্যক্তি, ছোট ব্যবসা কিংবা বড় প্রতিষ্ঠান – সবার জন্য GotiPay বিশেষভাবে তৈরি সমাধান প্রদান করে।"
+      ]
+    }
+  },
+  {
+    "icon": "HiOutlineLockClosed",
+    "color": "yellow",
+    "title": {
+      "en": "Technology & Security",
+      "bn": "প্রযুক্তি ও নিরাপত্তা"
+    },
+    "content": {
+      "en": [
+        "Our platform is built on a foundation of cutting-edge technology, ensuring that every transaction is processed with the highest levels of security and speed.",
+        "We employ robust encryption protocols, multi-factor authentication, and continuous fraud monitoring to safeguard your financial data and provide you with peace of mind.",
+        "Beyond security, we are committed to delivering an intuitive and seamless user experience."
+      ],
+      "bn": [
+        "আমাদের প্ল্যাটফর্ম তৈরি হয়েছে সর্বাধুনিক প্রযুক্তির ভিত্তিতে, যা প্রতিটি লেনদেনে সর্বোচ্চ নিরাপত্তা ও গতিশীলতা নিশ্চিত করে।",
+        "আমরা শক্তিশালী এনক্রিপশন, মাল্টি-ফ্যাক্টর অথেন্টিকেশন এবং অবিরাম জালিয়াতি পর্যবেক্ষণ ব্যবহার করি যাতে আপনার আর্থিক ডেটা সুরক্ষিত থাকে।",
+        "নিরাপত্তার পাশাপাশি আমরা ব্যবহারকারীদের জন্য সহজ ও স্বাচ্ছন্দ্যময় অভিজ্ঞতা প্রদানে প্রতিশ্রুতিবদ্ধ।"
+      ]
+    }
+  },
+  {
+    "icon": "HiOutlineLightBulb",
+    "color": "purple",
+    "title": {
+      "en": "Innovation",
+      "bn": "উদ্ভাবন"
+    },
+    "content": {
+      "en": [
+        "Innovation is a cornerstone of our identity. We are constantly exploring new technologies and methodologies to enhance our services.",
+        "Our research and development team integrates the latest advancements in fintech, keeping GotiPay at the forefront of digital payment innovation in Bangladesh."
+      ],
+      "bn": [
+        "উদ্ভাবন আমাদের পরিচয়ের অন্যতম ভিত্তি। আমরা সর্বদা নতুন প্রযুক্তি ও পদ্ধতি অন্বেষণ করি আমাদের সেবা উন্নত করতে।",
+        "আমাদের গবেষণা ও উন্নয়ন টিম সর্বশেষ ফিনটেক অগ্রগতি ব্যবহার করে যাতে GotiPay বাংলাদেশে ডিজিটাল পেমেন্ট উদ্ভাবনে অগ্রণী অবস্থানে থাকে।"
+      ]
+    }
+  },
+  {
+    "icon": "HiOutlineHandShake",
+    "color": "red",
+    "title": {
+      "en": "Community & Collaboration",
+      "bn": "কমিউনিটি ও সহযোগিতা"
+    },
+    "content": {
+      "en": [
+        "We actively engage with our users, listening to their feedback and incorporating their insights into our roadmap.",
+        "We also foster strategic partnerships with financial institutions, technology providers, and regulatory bodies to expand our reach and ensure compliance."
+      ],
+      "bn": [
+        "আমরা সক্রিয়ভাবে ব্যবহারকারীদের সাথে যুক্ত থাকি, তাদের মতামত শুনি এবং তা আমাদের পরিকল্পনায় অন্তর্ভুক্ত করি।",
+        "আমরা ব্যাংক, প্রযুক্তি সরবরাহকারী ও নিয়ন্ত্রক সংস্থাগুলোর সাথে কৌশলগত অংশীদারিত্ব গড়ে তুলি যাতে সেবার পরিসর বাড়ে এবং নিয়ম মেনে চলা যায়।"
+      ]
+    }
+  },
+  {
+    "icon": "HiOutlineGlobeAlt",
+    "color": "teal",
+    "title": {
+      "en": "Looking Ahead",
+      "bn": "আগামী দিনের পরিকল্পনা"
+    },
+    "content": {
+      "en": [
+        "Looking ahead, GotiPay is poised for continued expansion and evolution.",
+        "We are dedicated to reaching underserved communities and empowering more individuals and businesses to thrive in the digital economy.",
+        "Our commitment to excellence, innovation, and customer satisfaction will remain unwavering."
+      ],
+      "bn": [
+        "ভবিষ্যতের দিকে তাকিয়ে, GotiPay ক্রমাগত সম্প্রসারণ ও উন্নয়নের পথে রয়েছে।",
+        "আমরা সুবিধাবঞ্চিত কমিউনিটিতে পৌঁছাতে এবং আরও মানুষ ও ব্যবসাকে ডিজিটাল অর্থনীতিতে উন্নত করতে প্রতিশ্রুতিবদ্ধ।",
+        "উৎকর্ষ, উদ্ভাবন ও গ্রাহক সন্তুষ্টির প্রতি আমাদের প্রতিশ্রুতি সবসময় অটল থাকবে।"
+      ]
+    }
+  },
+  {
+    "icon": "HiOutlineHeart",
+    "color": "pink",
+    "title": {
+      "en": "Closing Note",
+      "bn": "শেষ কথা"
+    },
+    "content": {
+      "en": [
+        "Thank you for choosing GotiPay – together, we are building a more connected and financially empowered Bangladesh and beyond."
+      ],
+      "bn": [
+        "GotiPay বেছে নেওয়ার জন্য ধন্যবাদ – একসাথে আমরা একটি আরও সংযুক্ত ও আর্থিকভাবে ক্ষমতায়িত বাংলাদেশ গড়ে তুলছি।"
+      ]
+    }
   }
 ]
