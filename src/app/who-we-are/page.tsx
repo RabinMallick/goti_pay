@@ -11,16 +11,21 @@ import Footer from "@/components/Footer/Footer";
 import aboutusData from '@/data/aboutus.json';
 import clsx from 'clsx';
 
+/**
+ * Render content text with:
+ * - Highlighted company name ("GotiPay Ltd.")
+ * - Clickable emails
+ * - Clickable URLs
+ */
 const renderContent = (text: string) => {
-  // Highlight "GotiPay Ltd. from Bangladesh"
-  const highlightText = "GotiPay Ltd. from Bangladesh";
+  const highlightText = "GotiPay Ltd."; // text to highlight
   const emailRegex = /([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})/g;
   const urlRegex = /(https?:\/\/[^\s]+)/g;
 
   let parts: (string | React.ReactElement)[] = [];
   let lastIndex = 0;
 
-  // Split for highlight
+  // Highlight "GotiPay Ltd." in text
   const highlightRegex = new RegExp(highlightText, "g");
   let match;
   while ((match = highlightRegex.exec(text)) !== null) {
@@ -28,7 +33,7 @@ const renderContent = (text: string) => {
       parts.push(text.substring(lastIndex, match.index));
     }
     parts.push(
-      <span key={match.index} className="bg-yellow-200 font-semibold">
+      <span key={match.index} className="bg-yellow-50 font-semibold px-1">
         {highlightText}
       </span>
     );
@@ -38,7 +43,7 @@ const renderContent = (text: string) => {
     parts.push(text.substring(lastIndex));
   }
 
-  // Now handle emails/urls inside each part
+  // Make emails and URLs clickable within each part
   return parts.map((part, idx) => {
     if (typeof part === "string") {
       let subParts: (string | React.ReactElement)[] = [];
@@ -73,7 +78,16 @@ const renderContent = (text: string) => {
 
 const AboutUs: React.FC = () => {
   const language = useSelector((state: RootState) => state.language.value);
-  const icons = [Icons.HiOutlineUserGroup, Icons.HiOutlineLink, Icons.HiOutlineRefresh, Icons.HiOutlineLockClosed, Icons.HiOutlineLightBulb, Icons.HiOutlineGlobeAlt, Icons.HiOutlineHeart];
+
+  const icons = [
+    Icons.HiOutlineUserGroup,
+    Icons.HiOutlineLink,
+    Icons.HiOutlineRefresh,
+    Icons.HiOutlineLockClosed,
+    Icons.HiOutlineLightBulb,
+    Icons.HiOutlineGlobeAlt,
+    Icons.HiOutlineHeart
+  ];
 
   const colorMap: Record<string, string> = {
     gray: "text-gray-500",

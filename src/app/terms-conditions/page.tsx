@@ -56,7 +56,7 @@ const TermsConditions: React.FC = () => {
         parts.push(text.substring(lastIndex, match.index));
       }
       parts.push(
-        <span key={match.index} className="bg-yellow-100 font-semibold">
+        <span key={match.index} className="bg-yellow-50 font-semibold px-1">
           {highlightText}
         </span>
       );
