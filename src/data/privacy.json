@@ -42,22 +42,22 @@
       "en": [
         "We collect various types of information to provide and improve our Services, including:",
         "1.1. Personal Information: This refers to information that can be used to identify you directly or indirectly. Types include:",
-        "• Contact Information: Name, email address, postal address, phone number.",
-        "• Identification Information: Date of birth, national ID, passport number, driver's license, and other government-issued IDs for KYC and AML compliance.",
-        "• Financial Information: Bank account, MFS account, credit/debit card numbers, transaction history, and other payment-related information.",
-        "• Biometric Information: With your consent, we may collect fingerprints or facial scans for security and authentication.",
-        "• Demographic Information: Age, gender, and other demographic data for analytical purposes.",
+        "▪️ Contact Information: Name, email address, postal address, phone number.",
+        "▪️ Identification Information: Date of birth, national ID, passport number, driver's license, and other government-issued IDs for KYC and AML compliance.",
+        "▪️ Financial Information: Bank account, MFS account, credit/debit card numbers, transaction history, and other payment-related information.",
+        "▪️ Biometric Information: With your consent, we may collect fingerprints or facial scans for security and authentication.",
+        "▪️ Demographic Information: Age, gender, and other demographic data for analytical purposes.",
         "1.2. Transaction Information: Details related to transactions, including amount, currency, date/time, recipient/sender, type, and status.",
         "1.3. Device and Usage Information: IP address, device type, operating system, unique device identifiers, log data, location, cookies, and similar technologies."
       ],
       "bn": [
         "আমরা বিভিন্ন ধরনের তথ্য সংগ্রহ করি যাতে আমাদের সেবা প্রদান এবং উন্নত করা যায়, যার মধ্যে রয়েছে:",
         "1.1. ব্যক্তিগত তথ্য: এই তথ্য ব্যবহার করে আপনাকে সরাসরি বা পরোক্ষভাবে শনাক্ত করা যেতে পারে। ধরনগুলো:",
-        "• যোগাযোগের তথ্য: নাম, ইমেইল ঠিকানা, ডাক ঠিকানা, ফোন নম্বর।",
-        "• পরিচয় সম্পর্কিত তথ্য: জন্ম তারিখ, জাতীয় পরিচয়পত্র, পাসপোর্ট নম্বর, ড্রাইভারের লাইসেন্স এবং অন্যান্য সরকারি আইডি KYC ও AML অনুযায়ী।",
-        "• আর্থিক তথ্য: ব্যাংক অ্যাকাউন্ট, MFS অ্যাকাউন্ট, ক্রেডিট/ডেবিট কার্ড নম্বর, লেনদেন ইতিহাস এবং অন্যান্য অর্থপ্রদান সংক্রান্ত তথ্য।",
-        "• বায়োমেট্রিক তথ্য: আপনার সম্মতির সঙ্গে, আমরা ফিঙ্গারপ্রিন্ট বা ফেসিয়াল স্ক্যান সংগ্রহ করতে পারি নিরাপত্তা ও প্রমাণীকরণের জন্য।",
-        "• জনসংখ্যাতাত্ত্বিক তথ্য: বয়স, লিঙ্গ, এবং অন্যান্য ডেমোগ্রাফিক তথ্য বিশ্লেষণমূলক উদ্দেশ্যে।",
+        "▪️ যোগাযোগের তথ্য: নাম, ইমেইল ঠিকানা, ডাক ঠিকানা, ফোন নম্বর।",
+        "▪️ পরিচয় সম্পর্কিত তথ্য: জন্ম তারিখ, জাতীয় পরিচয়পত্র, পাসপোর্ট নম্বর, ড্রাইভারের লাইসেন্স এবং অন্যান্য সরকারি আইডি KYC ও AML অনুযায়ী।",
+        "▪️ আর্থিক তথ্য: ব্যাংক অ্যাকাউন্ট, MFS অ্যাকাউন্ট, ক্রেডিট/ডেবিট কার্ড নম্বর, লেনদেন ইতিহাস এবং অন্যান্য অর্থপ্রদান সংক্রান্ত তথ্য।",
+        "▪️ বায়োমেট্রিক তথ্য: আপনার সম্মতির সঙ্গে, আমরা ফিঙ্গারপ্রিন্ট বা ফেসিয়াল স্ক্যান সংগ্রহ করতে পারি নিরাপত্তা ও প্রমাণীকরণের জন্য।",
+        "▪️ জনসংখ্যাতাত্ত্বিক তথ্য: বয়স, লিঙ্গ, এবং অন্যান্য ডেমোগ্রাফিক তথ্য বিশ্লেষণমূলক উদ্দেশ্যে।",
         "1.2. লেনদেন সম্পর্কিত তথ্য: লেনদেনের বিস্তারিত, যেমন পরিমাণ, মুদ্রা, তারিখ/সময়, প্রাপক/প্রেরক, ধরন, এবং অবস্থা।",
         "1.3. ডিভাইস এবং ব্যবহার সম্পর্কিত তথ্য: আইপি ঠিকানা, ডিভাইস ধরন, অপারেটিং সিস্টেম, ইউনিক ডিভাইস আইডেন্টিফায়ার, লগ ডেটা, অবস্থান, কুকিজ এবং অনুরূপ প্রযুক্তি।"
       ]
@@ -73,23 +73,23 @@
     "content": {
       "en": [
         "We use the information we collect for various purposes, including:",
-        "• Providing and Maintaining Services: Operate, maintain, and provide all features, process transactions, manage accounts, and deliver customer support.",
-        "• Improving and Personalizing Services: Understand usage, develop new features, enhance existing ones, and personalize experience.",
-        "• Security and Fraud Prevention: Detect, prevent, and investigate fraudulent or unauthorized activities.",
-        "• Compliance with Legal Obligations: Comply with applicable laws in Bangladesh, including KYC, AML, and anti-terrorism financing laws.",
-        "• Communication: Send transactional emails, service announcements, security alerts, administrative messages, and optional marketing communications.",
-        "• Research and Analytics: Perform research to understand market trends, user behavior, and improve operations.",
-        "• Customer Support: Respond to inquiries, provide technical support, and resolve issues."
+        "▪️ Providing and Maintaining Services: Operate, maintain, and provide all features, process transactions, manage accounts, and deliver customer support.",
+        "▪️ Improving and Personalizing Services: Understand usage, develop new features, enhance existing ones, and personalize experience.",
+        "▪️ Security and Fraud Prevention: Detect, prevent, and investigate fraudulent or unauthorized activities.",
+        "▪️ Compliance with Legal Obligations: Comply with applicable laws in Bangladesh, including KYC, AML, and anti-terrorism financing laws.",
+        "▪️ Communication: Send transactional emails, service announcements, security alerts, administrative messages, and optional marketing communications.",
+        "▪️ Research and Analytics: Perform research to understand market trends, user behavior, and improve operations.",
+        "▪️ Customer Support: Respond to inquiries, provide technical support, and resolve issues."
       ],
       "bn": [
         "আমরা যে তথ্য সংগ্রহ করি তা বিভিন্ন উদ্দেশ্যে ব্যবহার করি, যেমন:",
-        "• সেবা প্রদান ও রক্ষণাবেক্ষণ: সব ফিচার পরিচালনা, লেনদেন প্রক্রিয়াকরণ, অ্যাকাউন্ট পরিচালনা, এবং গ্রাহক সহায়তা প্রদান।",
-        "• সেবা উন্নয়ন ও ব্যক্তিগতকরণ: ব্যবহার বোঝা, নতুন ফিচার তৈরি, বিদ্যমান উন্নত করা, এবং অভিজ্ঞতা ব্যক্তিগতকরণ।",
-        "• নিরাপত্তা এবং প্রতারণা প্রতিরোধ: প্রতারণামূলক বা অননুমোদিত কার্যক্রম সনাক্ত, প্রতিরোধ এবং তদন্ত।",
-        "• আইনি বাধ্যবাধকতার সঙ্গে সম্মতি: বাংলাদেশে প্রযোজ্য আইন মেনে চলা, যার মধ্যে রয়েছে KYC, AML, এবং সন্ত্রাসবিরোধী আইন।",
-        "• যোগাযোগ: লেনদেন সম্পর্কিত ইমেইল, সেবা ঘোষণা, নিরাপত্তা সতর্কতা, প্রশাসনিক বার্তা, এবং ঐচ্ছিক মার্কেটিং যোগাযোগ পাঠানো।",
-        "• গবেষণা এবং বিশ্লেষণ: বাজারের প্রবণতা, ব্যবহারকারীর আচরণ বোঝা, এবং অপারেশন উন্নত করা।",
-        "• গ্রাহক সহায়তা: প্রশ্নের উত্তর দেওয়া, প্রযুক্তিগত সহায়তা প্রদান, এবং সমস্যা সমাধান।"
+        "▪️ সেবা প্রদান ও রক্ষণাবেক্ষণ: সব ফিচার পরিচালনা, লেনদেন প্রক্রিয়াকরণ, অ্যাকাউন্ট পরিচালনা, এবং গ্রাহক সহায়তা প্রদান।",
+        "▪️ সেবা উন্নয়ন ও ব্যক্তিগতকরণ: ব্যবহার বোঝা, নতুন ফিচার তৈরি, বিদ্যমান উন্নত করা, এবং অভিজ্ঞতা ব্যক্তিগতকরণ।",
+        "▪️ নিরাপত্তা এবং প্রতারণা প্রতিরোধ: প্রতারণামূলক বা অননুমোদিত কার্যক্রম সনাক্ত, প্রতিরোধ এবং তদন্ত।",
+        "▪️ আইনি বাধ্যবাধকতার সঙ্গে সম্মতি: বাংলাদেশে প্রযোজ্য আইন মেনে চলা, যার মধ্যে রয়েছে KYC, AML, এবং সন্ত্রাসবিরোধী আইন।",
+        "▪️ যোগাযোগ: লেনদেন সম্পর্কিত ইমেইল, সেবা ঘোষণা, নিরাপত্তা সতর্কতা, প্রশাসনিক বার্তা, এবং ঐচ্ছিক মার্কেটিং যোগাযোগ পাঠানো।",
+        "▪️ গবেষণা এবং বিশ্লেষণ: বাজারের প্রবণতা, ব্যবহারকারীর আচরণ বোঝা, এবং অপারেশন উন্নত করা।",
+        "▪️ গ্রাহক সহায়তা: প্রশ্নের উত্তর দেওয়া, প্রযুক্তিগত সহায়তা প্রদান, এবং সমস্যা সমাধান।"
       ]
     }
   },
@@ -103,19 +103,19 @@
     "content": {
       "en": [
         "We may share your information with third parties in the following circumstances:",
-        "• With Service Providers: Third-party service providers performing functions on our behalf.",
-        "• For Legal Reasons: Required by Bangladeshi law or public authorities.",
-        "• Business Transfers: Merger, acquisition, reorganization, or sale of assets.",
-        "• With Your Consent: With your explicit consent.",
-        "• Aggregated or Anonymized Data: Share anonymized data for research, analytics, and marketing."
+        "▪️ With Service Providers: Third-party service providers performing functions on our behalf.",
+        "▪️ For Legal Reasons: Required by Bangladeshi law or public authorities.",
+        "▪️ Business Transfers: Merger, acquisition, reorganization, or sale of assets.",
+        "▪️ With Your Consent: With your explicit consent.",
+        "▪️ Aggregated or Anonymized Data: Share anonymized data for research, analytics, and marketing."
       ],
       "bn": [
         "আমরা আপনার তথ্য নিম্নলিখিত পরিস্থিতিতে তৃতীয় পক্ষের সঙ্গে শেয়ার করতে পারি:",
-        "• সেবা প্রদানকারীদের সঙ্গে: আমাদের পক্ষে ফাংশন সম্পাদনকারী তৃতীয় পক্ষের সেবা প্রদানকারী।",
-        "• আইনি কারণে: বাংলাদেশি আইন বা সরকারী কর্তৃপক্ষের দ্বারা প্রয়োজনীয়।",
-        "• ব্যবসায়িক স্থানান্তর: মিশ্রণ, অধিগ্রহণ, পুনর্গঠন, অথবা সম্পদ বিক্রয়।",
-        "• আপনার সম্মতির সঙ্গে: আপনার স্পষ্ট সম্মতির সঙ্গে।",
-        "• সংকলিত বা অ্যানোনিমাইজড ডেটা: গবেষণা, বিশ্লেষণ, এবং মার্কেটিং উদ্দেশ্যে অ্যানোনিমাইজড ডেটা শেয়ার।"
+        "▪️ সেবা প্রদানকারীদের সঙ্গে: আমাদের পক্ষে ফাংশন সম্পাদনকারী তৃতীয় পক্ষের সেবা প্রদানকারী।",
+        "▪️ আইনি কারণে: বাংলাদেশি আইন বা সরকারী কর্তৃপক্ষের দ্বারা প্রয়োজনীয়।",
+        "▪️ ব্যবসায়িক স্থানান্তর: মিশ্রণ, অধিগ্রহণ, পুনর্গঠন, অথবা সম্পদ বিক্রয়।",
+        "▪️ আপনার সম্মতির সঙ্গে: আপনার স্পষ্ট সম্মতির সঙ্গে।",
+        "▪️ সংকলিত বা অ্যানোনিমাইজড ডেটা: গবেষণা, বিশ্লেষণ, এবং মার্কেটিং উদ্দেশ্যে অ্যানোনিমাইজড ডেটা শেয়ার।"
       ]
     }
   },
@@ -129,18 +129,18 @@
     "content": {
       "en": [
         "We implement security measures to maintain the safety of your personal information, including:",
-        "• Encryption: SSL/TLS to protect data in transit.",
-        "• Access Controls: Restricted to authorized employees and service providers.",
-        "• Regular Security Audits: Identify and address potential weaknesses.",
-        "• Fraud Detection Systems: Monitor transactions and prevent unauthorized access.",
+        "▪️ Encryption: SSL/TLS to protect data in transit.",
+        "▪️ Access Controls: Restricted to authorized employees and service providers.",
+        "▪️ Regular Security Audits: Identify and address potential weaknesses.",
+        "▪️ Fraud Detection Systems: Monitor transactions and prevent unauthorized access.",
         "Despite our efforts, no method of transmission over the Internet or electronic storage is 100% secure."
       ],
       "bn": [
         "আমরা আপনার ব্যক্তিগত তথ্যের নিরাপত্তা বজায় রাখতে বিভিন্ন নিরাপত্তা ব্যবস্থা বাস্তবায়ন করি, যেমন:",
-        "• এনক্রিপশন: SSL/TLS ডেটা ট্রান্সমিশনের সময় সুরক্ষা।",
-        "• অ্যাক্সেস কন্ট্রোল: অনুমোদিত কর্মচারী এবং সেবা প্রদানকারীদের জন্য সীমাবদ্ধ।",
-        "• নিয়মিত নিরাপত্তা অডিট: সম্ভাব্য দুর্বলতা সনাক্ত এবং সমাধান।",
-        "• প্রতারণা সনাক্তকরণ ব্যবস্থা: লেনদেন পর্যবেক্ষণ এবং অননুমোদিত প্রবেশ প্রতিরোধ।",
+        "▪️ এনক্রিপশন: SSL/TLS ডেটা ট্রান্সমিশনের সময় সুরক্ষা।",
+        "▪️ অ্যাক্সেস কন্ট্রোল: অনুমোদিত কর্মচারী এবং সেবা প্রদানকারীদের জন্য সীমাবদ্ধ।",
+        "▪️ নিয়মিত নিরাপত্তা অডিট: সম্ভাব্য দুর্বলতা সনাক্ত এবং সমাধান।",
+        "▪️ প্রতারণা সনাক্তকরণ ব্যবস্থা: লেনদেন পর্যবেক্ষণ এবং অননুমোদিত প্রবেশ প্রতিরোধ।",
         "আমাদের প্রচেষ্টার পরেও, ইন্টারনেট বা ইলেকট্রনিক স্টোরেজের কোনো পদ্ধতি 100% নিরাপদ নয়।"
       ]
     }
@@ -155,23 +155,23 @@
     "content": {
       "en": [
         "As a user in Bangladesh, you may have certain rights regarding your personal information, including:",
-        "• Right to Access: Request access to personal information we hold.",
-        "• Right to Rectification: Request correction of inaccurate or incomplete information.",
-        "• Right to Erasure: Request deletion under certain circumstances.",
-        "• Right to Restrict Processing: Request restriction under certain conditions.",
-        "• Right to Data Portability: Receive personal information in a structured, machine-readable format.",
-        "• Right to Object: Object to processing under certain circumstances.",
-        "• Right to Withdraw Consent: Withdraw consent if previously given."
+        "▪️ Right to Access: Request access to personal information we hold.",
+        "▪️ Right to Rectification: Request correction of inaccurate or incomplete information.",
+        "▪️ Right to Erasure: Request deletion under certain circumstances.",
+        "▪️ Right to Restrict Processing: Request restriction under certain conditions.",
+        "▪️ Right to Data Portability: Receive personal information in a structured, machine-readable format.",
+        "▪️ Right to Object: Object to processing under certain circumstances.",
+        "▪️ Right to Withdraw Consent: Withdraw consent if previously given."
       ],
       "bn": [
         "বাংলাদেশে একজন ব্যবহারকারী হিসাবে, আপনার কিছু অধিকার থাকতে পারে, যেমন:",
-        "• অ্যাক্সেসের অধিকার: আমরা যেই ব্যক্তিগত তথ্য ধারণ করি তা অ্যাক্সেসের অনুরোধ।",
-        "• সংশোধনের অধিকার: ভুল বা অসম্পূর্ণ তথ্য সংশোধনের অনুরোধ।",
-        "• মুছে ফেলার অধিকার: নির্দিষ্ট পরিস্থিতিতে তথ্য মুছে ফেলার অনুরোধ।",
-        "• প্রক্রিয়াজাতকরণ সীমিত করার অধিকার: নির্দিষ্ট শর্তে প্রক্রিয়াজাতকরণ সীমিত করার অনুরোধ।",
-        "• তথ্য স্থানান্তরের অধিকার: ব্যক্তিগত তথ্য একটি কাঠামোবদ্ধ, মেশিন-পঠনযোগ্য ফরম্যাটে পাওয়ার অধিকার।",
-        "• আপত্তি করার অধিকার: নির্দিষ্ট পরিস্থিতিতে প্রক্রিয়াজাতকরণের বিরুদ্ধে আপত্তি।",
-        "• সম্মতি প্রত্যাহারের অধিকার: পূর্বে দেওয়া সম্মতি প্রত্যাহার করার অধিকার।"
+        "▪️ অ্যাক্সেসের অধিকার: আমরা যেই ব্যক্তিগত তথ্য ধারণ করি তা অ্যাক্সেসের অনুরোধ।",
+        "▪️ সংশোধনের অধিকার: ভুল বা অসম্পূর্ণ তথ্য সংশোধনের অনুরোধ।",
+        "▪️ মুছে ফেলার অধিকার: নির্দিষ্ট পরিস্থিতিতে তথ্য মুছে ফেলার অনুরোধ।",
+        "▪️ প্রক্রিয়াজাতকরণ সীমিত করার অধিকার: নির্দিষ্ট শর্তে প্রক্রিয়াজাতকরণ সীমিত করার অনুরোধ।",
+        "▪️ তথ্য স্থানান্তরের অধিকার: ব্যক্তিগত তথ্য একটি কাঠামোবদ্ধ, মেশিন-পঠনযোগ্য ফরম্যাটে পাওয়ার অধিকার।",
+        "▪️ আপত্তি করার অধিকার: নির্দিষ্ট পরিস্থিতিতে প্রক্রিয়াজাতকরণের বিরুদ্ধে আপত্তি।",
+        "▪️ সম্মতি প্রত্যাহারের অধিকার: পূর্বে দেওয়া সম্মতি প্রত্যাহার করার অধিকার।"
       ]
     }
   },
@@ -244,12 +244,12 @@
     "icon": "HiOutlineMail",
     "content": {
       "en": [
-        "• By email: info@gotipay.com",
-        "• By mail: GotiPay Privacy Department, 104 Sukhrabad, Dhanmondi, Dhaka-1207, Bangladesh."
+        "▪️ By email: info@gotipay.com",
+        "▪️ By mail: GotiPay Privacy Department, 104 Sukhrabad, Dhanmondi, Dhaka-1207, Bangladesh."
       ],
       "bn": [
-        "• ইমেইল: info@gotipay.com",
-        "• ডাকের মাধ্যমে: GotiPay Privacy Department, 104 Sukhrabad, Dhanmondi, Dhaka-1207, Bangladesh."
+        "▪️ ইমেইল: info@gotipay.com",
+        "▪️ ডাকের মাধ্যমে: GotiPay Privacy Department, 104 Sukhrabad, Dhanmondi, Dhaka-1207, Bangladesh."
       ]
     }
   }

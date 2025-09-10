@@ -1,9 +1,6 @@
 // pages/privacy.tsx
 'use client';
-import React from "react";
-import { FaLock, FaUserShield, FaDatabase } from 'react-icons/fa';
-import { MdPrivacyTip } from "react-icons/md";
-import { HiOutlineUserGroup, HiOutlineLink, HiOutlineRefresh, HiOutlineMail } from "react-icons/hi";
+import React from "react"; 
 import * as Icons from 'react-icons/hi';
 import HeroSection from "@/components/Hero/HeroSection";
 import { useSelector } from "react-redux";
@@ -65,7 +62,7 @@ const renderContent = (text: string) => {
 
 const PrivacyPolicy: React.FC = () => {
   const language = useSelector((state: RootState) => state.language.value);
-  const icons = [FaLock, FaUserShield, FaDatabase, MdPrivacyTip, HiOutlineUserGroup, HiOutlineLink, HiOutlineRefresh, HiOutlineMail];
+  const icons = [ Icons.HiOutlineDocumentText,Icons.HiOutlineCreditCard, Icons.HiOutlineUserGroup, Icons.HiOutlineLink, Icons.HiOutlineRefresh, Icons.HiOutlineMail, Icons.HiOutlineShieldCheck];
 
   const colorMap: Record<string, string> = {
     gray: "text-gray-500",
