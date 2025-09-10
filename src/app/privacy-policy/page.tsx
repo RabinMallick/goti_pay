@@ -5,9 +5,9 @@ import * as Icons from 'react-icons/hi';
 import HeroSection from "@/components/Hero/HeroSection";
 import { useSelector } from "react-redux";
 import { RootState } from "@/store/store";
-import Navbar from "@/components/Navber/Navbar";
+import Navbar from "@/components/include/Navbar";
 import ScrollTop from "@/components/Button/ScrollTop";
-import Footer from "@/components/Footer/Footer";
+import Footer from "@/components/include/Footer";
 import privacyData from '@/data/privacy.json';
 import clsx from 'clsx';
 

@@ -6,6 +6,7 @@ import { FaFacebookF, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import { path } from "@/utils/baseurl";
 
 const Footer: React.FC = () => {
   const topCols = [
@@ -65,16 +66,16 @@ const Footer: React.FC = () => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: false, amount: 0.3 }}
-      >
+      > 
         <motion.div variants={fadeUp}>
           <Image src="/logo.svg" alt="Gotipay Logo" width={150} height={50} className="object-contain" />
         </motion.div>
         <motion.div className="flex gap-3" variants={fadeUp}>
           <a href="https://www.apple.com/app-store/" target="_blank" rel="noopener noreferrer">
-            <Image src="/apple-store.png" alt="Download on Apple Store" width={140} height={40} />
+            <Image src={`${path}EmailTemplateLogo/applestore.png`} alt="Download on Apple Store" width={140} height={40} />
           </a>
           <a href="https://play.google.com/store" target="_blank" rel="noopener noreferrer">
-            <Image src="/play-store.png" alt="Get it on Google Play" width={140} height={40} />
+            <Image src={`${path}EmailTemplateLogo/playstore.png`} alt="Get it on Google Play" width={140} height={40} />
           </a>
         </motion.div>
       </motion.div>

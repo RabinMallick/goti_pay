@@ -6,9 +6,9 @@ import * as Icons from 'react-icons/hi';
 import HeroSection from '@/components/Hero/HeroSection';
 import { RootState } from '@/store/store';
 import { useSelector } from 'react-redux';
-import Navbar from '@/components/Navber/Navbar';
+import Navbar from '@/components/include/Navbar';
 import ScrollTop from '@/components/Button/ScrollTop';
-import Footer from '@/components/Footer/Footer';
+import Footer from '@/components/include/Footer';
 
 const TermsConditions: React.FC = () => {
   const language = useSelector((state: RootState) => state.language.value);

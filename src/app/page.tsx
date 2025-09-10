@@ -5,8 +5,8 @@ import { motion } from 'framer-motion';
 import ScrollTop from '@/components/Button/ScrollTop';
 import EarthMain from '@/components/Earth/EarthMain';
 import { fadeDown, fadeUp, rotateIn, staggerContainer, zoomIn } from '@/utils/VariantsFade';
-import Navbar from '@/components/Navber/Navbar';
-import Footer from '@/components/Footer/Footer';
+import Navbar from '@/components/include/Navbar';
+import Footer from '@/components/include/Footer';
 
 interface Feature {
   title: string;
