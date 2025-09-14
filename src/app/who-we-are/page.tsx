@@ -8,7 +8,7 @@ import { RootState } from "@/store/store";
 import Navbar from "@/components/include/Navbar";
 import ScrollTop from "@/components/Button/ScrollTop";
 import Footer from "@/components/include/Footer";
-import aboutusData from '@/data/aboutus.json';
+import aboutusData from '@/utils/json/aboutus.json';
 import clsx from 'clsx';
 
 /**

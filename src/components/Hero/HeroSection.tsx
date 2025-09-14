@@ -15,7 +15,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
   title,
   description,
 }) => {
-
+ 
   return (
     <section className="relative overflow-hidden bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600">
       {/* Animated Background Icons */}

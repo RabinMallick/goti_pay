@@ -109,7 +109,7 @@ const Earth: React.FC = () => {
         <Stars radius={100} depth={50} count={5000} factor={4} fade />
         <EarthMesh />
         <CountryBorders radius={2.01} />
-        <OrbitControls enableZoom={true} enablePan={false} autoRotate autoRotateSpeed={0.8} />
+        <OrbitControls enableZoom={false} enablePan={false} autoRotate autoRotateSpeed={0.8} />
       </Canvas>
     </div>
   )

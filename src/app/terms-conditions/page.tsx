@@ -1,7 +1,7 @@
 // pages/terms.tsx
 'use client';
 import React from 'react';
-import termsData from '@/data/terms.json';
+import termsData from '@/utils/json/terms.json';
 import * as Icons from 'react-icons/hi';
 import HeroSection from '@/components/Hero/HeroSection';
 import { RootState } from '@/store/store';

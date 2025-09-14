@@ -5,6 +5,7 @@ interface DocsState {
   activeCodeTab: string;
   openSubmenus: Record<string, boolean>;
   mobileSidebarOpen: boolean;
+  currentHash: string;
 }
 
 const initialState: DocsState = {
@@ -12,6 +13,7 @@ const initialState: DocsState = {
   activeCodeTab: 'Shell',
   openSubmenus: {},
   mobileSidebarOpen: false,
+  currentHash: '',
 };
 
 const docsSlice = createSlice({
@@ -30,10 +32,18 @@ const docsSlice = createSlice({
     setMobileSidebarOpen: (state, action: PayloadAction<boolean>) => {
       state.mobileSidebarOpen = action.payload;
     },
+    setCurrentHash(state, action: PayloadAction<string>) {
+      state.currentHash = action.payload;
+    },
   },
 });
 
-export const { setSelectedVersion, setActiveCodeTab, toggleSubmenu, setMobileSidebarOpen } =
-  docsSlice.actions;
+export const {
+  setSelectedVersion,
+  setActiveCodeTab,
+  toggleSubmenu,
+  setMobileSidebarOpen,
+  setCurrentHash,
+} = docsSlice.actions;
 
 export default docsSlice.reducer;

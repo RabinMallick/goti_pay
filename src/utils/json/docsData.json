@@ -1,0 +1,48 @@
+{
+  "sections": [
+    {
+      "id": "Introduction",
+      "title": "Introduction",
+      "content": [
+        "Welcome to the Airwallex API documentation.",
+        "Here you will learn how to integrate and interact with Airwallex services efficiently.",
+        "The documentation is organized by sections that cover endpoints, authentication, data types, errors, and more."
+      ]
+    },
+    {
+      "id": "Getting_Started",
+      "title": "Getting Started",
+      "content": [
+        "Follow these steps to quickly get up and running with the Airwallex API.",
+        "1. Create a sandbox account.",
+        "2. Obtain your Client ID and API key.",
+        "3. Test endpoints in a secure environment before going live."
+      ]
+    },
+    {
+      "id": "Authentication",
+      "title": "Authentication",
+      "content": [
+        "Learn how to authenticate requests using Client ID and API key.",
+        "Obtain access tokens to call secure endpoints.",
+        "Handle token expiration and refresh tokens as needed."
+      ],
+      "codeExamples": {
+        "Shell": "curl -X POST https://api-demo.airwallex.com/api/v1/authentication/login \\ -H \"Content-Type: application/json\" \\ -d '{\"client_id\":\"YOUR_CLIENT_ID\",\"api_key\":\"YOUR_API_KEY\"}'",
+        "JavaScript": "import axios from 'axios';\n\naxios.request({\n  url: 'https://api-demo.airwallex.com/api/v1/authentication/login',\n  method: 'post',\n  headers: { 'Content-Type': 'application/json' },\n  data: { client_id: 'YOUR_CLIENT_ID', api_key: 'YOUR_API_KEY' },\n});",
+        "Python": "import requests\n\nresponse = requests.post(\n  'https://api-demo.airwallex.com/api/v1/authentication/login',\n  json={'client_id': 'YOUR_CLIENT_ID', 'api_key': 'YOUR_API_KEY'}\n)",
+        "CSharp": "// C# example\nusing System.Net.Http;",
+        "Java": "// Java example\nHttpClient client = HttpClient.newHttpClient();"
+      }
+    },
+    {
+      "id": "Billing",
+      "title": "Billing",
+      "content": [
+        "This section covers billing, invoices, and payment management.",
+        "Retrieve invoices, check payment status, and manage billing details.",
+        "Use the API to automate billing workflows efficiently."
+      ]
+    }
+  ]
+}

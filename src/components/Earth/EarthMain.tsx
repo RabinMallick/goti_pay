@@ -2,7 +2,7 @@
 import React from 'react'
 import dynamic from 'next/dynamic'
 import { motion } from 'framer-motion'
-import {  fadeUp, staggerContainer, zoomIn } from '@/utils/VariantsFade'
+import { fadeUp, staggerContainer, zoomIn } from '@/utils/VariantsFade'
 
 // Dynamically import Earth for client-side only
 const Earth = dynamic(() => import('./Earth'), {
