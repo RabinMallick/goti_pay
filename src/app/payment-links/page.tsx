@@ -5,6 +5,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import PaymentCarousel from "@/components/Carousel/PaymentCarousel";
 import SimplifyingPayments from "@/components/common/SimplifyingPayments";
+import PaymentLinkFeatures from "@/components/common/PaymentLinkFeatures";
 
 const HeroSection: React.FC = () => {
     const logos = Array(8).fill("logo.svg");
@@ -85,6 +86,10 @@ const HeroSection: React.FC = () => {
             {/* Carousel & Simplifying Payments */}
             <PaymentCarousel logos={logos} />
             <SimplifyingPayments />
+
+
+            <PaymentLinkFeatures/>
+            
         </div>
     );
 };

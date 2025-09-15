@@ -52,7 +52,7 @@ const industries: IndustryCardProps[] = [
 
 const SimplifyingPayments: FC = () => {
   return (
-    <div className="py-16">
+    <div className="py-16 bg-gradient-to-r from-gray-200 via-gray-300 to-gray-400">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-xl sm:text-2xl lg:text-4xl font-bold text-center mb-10">
           Simplifying payments for every <span className="text-blue-600">industry</span>
