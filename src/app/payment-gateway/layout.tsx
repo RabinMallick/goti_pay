@@ -4,8 +4,9 @@ import Navbar from "@/components/include/Navbar";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Payment Gateway",
- description: "Goti Pay is a secure, fast, and user-friendly online payment system for cards, wallets, and bank transfers, ensuring smooth transactions worldwide.",
+  title: "Payment Links",
+  description:
+    "Goti Pay Online Payment System is a secure, fast, and user-friendly digital payment solution designed to simplify online transactions. It enables businesses and individuals to send and receive money seamlessly through multiple payment methods, including credit/debit cards, mobile wallets, and bank transfers. With robust security features and an intuitive interface, Goti Pay ensures a smooth and reliable payment experience for users worldwide.",
 };
 
 export default function RootLayout({

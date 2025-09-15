@@ -60,7 +60,7 @@ export const menuItems: MegaMenuItem[] = [
           {
             title: 'Payment Gateway',
             description: 'Payments on your Website & App',
-            href: '#',
+            href: '/payment-gateway',
             icon: icons?.rocket,
             badge: 'NEW',
           },
