@@ -64,6 +64,7 @@ const Home: FC = () => {
             </motion.div>
           </div>
         </motion.section>
+        
 
         {/* Features Section */}
         <motion.section className="text-center py-12 sm:py-16 px-4 md:px-20 mx-auto" initial="hidden" whileInView="visible" viewport={{ once: false, amount: 0.2 }}>

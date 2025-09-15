@@ -67,7 +67,7 @@ export const menuItems: MegaMenuItem[] = [
           {
             title: 'Payment Links',
             description: 'Create & send links to collect money',
-            href: '#',
+            href: '/payment-links',
             icon: icons?.file,
           },
           {

@@ -19,7 +19,7 @@ export default function Navbar() {
 
   return (
     <nav className="bg-white border-b border-gray-200 fixed w-full top-0 left-0 z-50">
-      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-3">
+      <div className="max-w-6xl  flex flex-wrap items-center justify-between mx-auto p-3">
         {/* Logo */}
         <Link href="/" className="flex items-center">
           <Image src="/logo.svg" alt="Logo" width={110} height={32} priority />
@@ -142,7 +142,7 @@ export default function Navbar() {
                 href="/register"
                 className="px-3 py-1 border border-[var(--primary)] bg-[var(--primary)] text-white rounded hover:bg-blue-800 text-[0.85rem]"
               >
-                Register ↗
+                Register →
               </Link>
             </li>
           </ul>
@@ -243,7 +243,7 @@ export default function Navbar() {
                       href="/register"
                       className="block px-3 py-1 bg-[var(--primary)] rounded text-white text-[11px] uppercase text-center w-full"
                     >
-                      Register 
+                      Register →
                     </Link>
                   </li>
                 </ul>
