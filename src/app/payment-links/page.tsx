@@ -42,7 +42,7 @@ const HeroSection: React.FC = () => {
                     variants={textVariant}
                     className="md:w-1/2 space-y-6"
                 >
-                    <h1 className="text-2xl md:text-5xl font-bold leading-tight tracking-wide">
+                    <h1 className="text-2xl md:text-3xl lg:text-5xl font-bold leading-tight tracking-wide">
                         Create a <span className="text-blue-600">payment link</span> & accept payments <span className="text-purple-600">in seconds</span>
                     </h1>
                     <motion.p
@@ -56,7 +56,7 @@ const HeroSection: React.FC = () => {
                     <motion.button
                         whileHover={{ scale: 0.99, boxShadow: "0 0 5px rgba(99, 102, 241, 0.7)" }}
                         whileTap={{ scale: 0.95 }}
-                        className="text-xs md:text-[18px] px-6 py-2 rounded-md bg-gradient-to-r from-blue-600 to-purple-600 text-white  cursor-pointer shadow-lg"
+                        className="text-xs sm:text-md lg:text-[18px] px-6 py-2 rounded-md bg-gradient-to-r from-blue-600 to-purple-600 text-white  cursor-pointer shadow-lg"
                     >
                         Sign up →
                     </motion.button>
