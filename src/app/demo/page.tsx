@@ -3,9 +3,9 @@
 import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import DebitOrCredit from '@/components/UI/payement-gateway/DebitOrCredit';
-import MoblieBanking from '@/components/UI/payement-gateway/MoblieBanking';
-import NetBanking from '@/components/UI/payement-gateway/NetBanking';
+import DebitOrCredit from '@/components/UI/demo/DebitOrCredit';
+import MoblieBanking from '@/components/UI/demo/MoblieBanking';
+import NetBanking from '@/components/UI/demo/NetBanking';
 import { IoChevronBack } from "react-icons/io5";
 import { FaRegCircleDot } from "react-icons/fa6";
 import { useSelector, useDispatch } from 'react-redux';

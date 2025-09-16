@@ -6,7 +6,6 @@ import HeroSection from "@/components/Hero/HeroSection";
 import { useSelector } from "react-redux";
 import { RootState } from "@/store/store";
 import Navbar from "@/components/include/Navbar";
-import ScrollTop from "@/components/Button/ScrollTop";
 import Footer from "@/components/include/Footer";
 import privacyData from '@/utils/json/privacy.json';
 import clsx from 'clsx';
@@ -154,7 +153,6 @@ const PrivacyPolicy: React.FC = () => {
 
       {/* Footer and Scroll-to-Top Button */}
       <Footer />
-      <ScrollTop />
     </>
   );
 };

@@ -54,7 +54,7 @@ export const menuItems: MegaMenuItem[] = [
           {
             title: 'Payment Aggregator',
             description: 'Accepting payments made easy',
-            href: '#',
+            href: '/payment-aggregator',
             icon: icons?.wallet,
           },
           {

@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { path } from "@/utils/baseurl";
+import ScrollTop from "../Button/ScrollTop";
 
 const Footer: React.FC = () => {
   const topCols = [
@@ -146,6 +147,8 @@ const Footer: React.FC = () => {
           </motion.div>
         </div>
       </motion.div>
+
+      <ScrollTop/>
     </footer>
   );
 };

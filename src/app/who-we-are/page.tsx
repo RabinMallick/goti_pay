@@ -1,15 +1,14 @@
 // pages/about.tsx
 'use client';
+import clsx from 'clsx';
 import React from "react";
 import * as Icons from 'react-icons/hi';
 import HeroSection from "@/components/Hero/HeroSection";
 import { useSelector } from "react-redux";
 import { RootState } from "@/store/store";
 import Navbar from "@/components/include/Navbar";
-import ScrollTop from "@/components/Button/ScrollTop";
 import Footer from "@/components/include/Footer";
 import aboutusData from '@/utils/json/aboutus.json';
-import clsx from 'clsx';
 
 /**
  * Render content text with:
@@ -17,6 +16,7 @@ import clsx from 'clsx';
  * - Clickable emails
  * - Clickable URLs
  */
+
 const renderContent = (text: string) => {
   const highlightText = "GotiPay Ltd."; // text to highlight
   const emailRegex = /([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})/g;
@@ -146,7 +146,6 @@ const AboutUs: React.FC = () => {
       </div>
 
       <Footer />
-      <ScrollTop />
     </>
   );
 };

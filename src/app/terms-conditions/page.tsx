@@ -7,7 +7,6 @@ import HeroSection from '@/components/Hero/HeroSection';
 import { RootState } from '@/store/store';
 import { useSelector } from 'react-redux';
 import Navbar from '@/components/include/Navbar';
-import ScrollTop from '@/components/Button/ScrollTop';
 import Footer from '@/components/include/Footer';
 
 const TermsConditions: React.FC = () => {
@@ -146,7 +145,6 @@ const TermsConditions: React.FC = () => {
       </div>
 
       <Footer />
-      <ScrollTop />
     </>
   );
 };
