@@ -30,7 +30,7 @@ const PaymentCarousel: React.FC<PaymentCarouselProps> = ({ logos }) => {
   };
 
   return (
-    <div className="relative w-full overflow-hidden bg-gray-100">
+    <div className="relative w-full overflow-hidden  mb-6">
       <div className="max-w-7xl mx-auto pt-2 ">
         <Slider {...settings}>
           {repeatedLogos.map((logo, idx) => (

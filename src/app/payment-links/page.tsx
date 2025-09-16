@@ -16,7 +16,7 @@ const HeroSection: React.FC = () => {
     };
 
     return (
-        <div className="relative overflow-hidden my-5">
+        <div className="relative overflow-hidden py-10  md:py-2">
             {/* Animated Background Circles */}
             <motion.div
                 className="absolute top-20 left-1/2 w-[500px] h-[500px] bg-gradient-to-r from-blue-200 via-purple-200 to-pink-200 rounded-full opacity-30 -translate-x-1/2 -z-10"
@@ -35,7 +35,7 @@ const HeroSection: React.FC = () => {
             <motion.div className="absolute top-20 left-1/4 w-10 h-10 bg-pink-300 rounded-full opacity-50 animate-pulse -z-10" />
 
             {/* Hero Content */}
-            <div className="max-w-6xl mx-auto px-4 py-16 flex flex-col md:flex-row items-center gap-8 relative z-10">
+            <div className="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center gap-8 relative z-10">
                 {/* Text */}
                 <motion.div
                     initial="hidden"
@@ -86,6 +86,7 @@ const HeroSection: React.FC = () => {
             {/* Carousel & Simplifying Payments */}
             
             <PaymentCarousel logos={logos} />
+            
             <SimplifyingPayments />
             <PaymentLinkFeatures/>
             

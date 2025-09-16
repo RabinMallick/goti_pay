@@ -51,7 +51,7 @@ const PaymentGateway: React.FC = () => {
   return (
 
     <>
-      <section className="relative overflow-hidden pb-16 pt-24  md:py-24">
+      <section className="relative overflow-hidden py-10  md:py-14">
         {/* Backgrounds */}
         <div className="absolute inset-0 -z-10 bg-gradient-to-br from-indigo-50 via-white to-pink-50" />
         <div className="absolute -top-40 -left-40 w-96 h-96 bg-purple-300 opacity-30 blur-[140px] rounded-full -z-10" />
@@ -66,7 +66,7 @@ const PaymentGateway: React.FC = () => {
         >
           {/* Left Content */}
           <motion.div variants={textVariant} className="space-y-4 sm:space-y-5">
-            <h2 className="text-[20px] sm:text-[22px] md:text-[24px] lg:text-[28px] font-extrabold bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
+            <h2 className="text-[16px] sm:text-[20px] md:text-[24px] lg:text-[28px] font-extrabold bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
               For Global Software Platforms
             </h2>
             <motion.p
