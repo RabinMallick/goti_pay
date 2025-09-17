@@ -60,7 +60,7 @@ const Footer: React.FC = () => {
   };
 
   return (
-    <footer className="bg-gray-100 text-gray-700 pt-3">
+    <footer className="bg-gradient-to-r from-purple-50 via-indigo-50 to-blue-50 text-gray-700 pt-3">
       {/* Top logo and store buttons */}
       <motion.div
         className="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row justify-between items-center gap-4"

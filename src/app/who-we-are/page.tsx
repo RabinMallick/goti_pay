@@ -9,6 +9,7 @@ import { RootState } from "@/store/store";
 import Navbar from "@/components/include/Navbar";
 import Footer from "@/components/include/Footer";
 import aboutusData from '@/utils/json/aboutus.json';
+import { renderContent } from '@/utils/renderContent';
 
 /**
  * Render content text with:
@@ -17,65 +18,7 @@ import aboutusData from '@/utils/json/aboutus.json';
  * - Clickable URLs
  */
 
-const renderContent = (text: string) => {
-  const highlightText = "GotiPay Ltd."; // text to highlight
-  const emailRegex = /([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})/g;
-  const urlRegex = /(https?:\/\/[^\s]+)/g;
-
-  let parts: (string | React.ReactElement)[] = [];
-  let lastIndex = 0;
-
-  // Highlight "GotiPay Ltd." in text
-  const highlightRegex = new RegExp(highlightText, "g");
-  let match;
-  while ((match = highlightRegex.exec(text)) !== null) {
-    if (match.index > lastIndex) {
-      parts.push(text.substring(lastIndex, match.index));
-    }
-    parts.push(
-      <span key={match.index} className="bg-yellow-50 font-semibold px-1">
-        {highlightText}
-      </span>
-    );
-    lastIndex = match.index + highlightText.length;
-  }
-  if (lastIndex < text.length) {
-    parts.push(text.substring(lastIndex));
-  }
-
-  // Make emails and URLs clickable within each part
-  return parts.map((part, idx) => {
-    if (typeof part === "string") {
-      let subParts: (string | React.ReactElement)[] = [];
-      let last = 0;
-      const combinedRegex = new RegExp(`${emailRegex.source}|${urlRegex.source}`, 'g');
-      let m;
-      while ((m = combinedRegex.exec(part)) !== null) {
-        if (m.index > last) subParts.push(part.substring(last, m.index));
-
-        const matchedText = m[0];
-        if (emailRegex.test(matchedText)) {
-          subParts.push(
-            <a key={idx + m.index} href={`mailto:${matchedText}`} className="text-blue-600 underline hover:text-blue-800">
-              {matchedText}
-            </a>
-          );
-        } else if (urlRegex.test(matchedText)) {
-          subParts.push(
-            <a key={idx + m.index} href={matchedText} target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-800">
-              {matchedText}
-            </a>
-          );
-        }
-        last = m.index + matchedText.length;
-      }
-      if (last < part.length) subParts.push(part.substring(last));
-      return <React.Fragment key={idx}>{subParts}</React.Fragment>;
-    }
-    return part;
-  });
-};
-
+ 
 const AboutUs: React.FC = () => {
   const language = useSelector((state: RootState) => state.language.value);
 

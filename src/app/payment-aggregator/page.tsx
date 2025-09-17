@@ -66,7 +66,7 @@ const faqs = [
 const settings = {
     dots: true,
     infinite: true,
-     arrows: false,  
+    arrows: false,
     speed: 500,
     slidesToShow: 2,
     slidesToScroll: 1,
@@ -205,26 +205,24 @@ const PaymentAggregator: React.FC = () => {
             </section>
 
 
-
             <section className="py-14 bg-indigo-50 px-4 text-center">
-    <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold mb-12">
-        What Our Clients Say
-    </h2>
-    <div className="max-w-6xl mx-auto">
-        <Slider {...settings}>
-            {testimonials.map((t, idx) => (
-                <div key={idx} className="p-2 sm:p-4">
-                    <div className="bg-white p-6 sm:p-8 rounded-lg shadow text-xs sm:text-sm md:text-base">
-                        <p className="italic mb-2">“{t.quote}”</p>
-                        <h4 className="font-semibold">{t.name}</h4>
-                        <span className="text-gray-500">{t.role}</span>
-                    </div>
+                <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold mb-12">
+                    What Our Clients Say
+                </h2>
+                <div className="max-w-6xl mx-auto">
+                    <Slider {...settings}>
+                        {testimonials.map((t, idx) => (
+                            <div key={idx} className="p-2 sm:p-4">
+                                <div className="bg-white p-6 sm:p-8 rounded-lg shadow text-xs sm:text-sm md:text-base">
+                                    <p className="italic mb-2">“{t.quote}”</p>
+                                    <h4 className="font-semibold">{t.name}</h4>
+                                    <span className="text-gray-500 text-sm">{t.role}</span>
+                                </div>
+                            </div>
+                        ))}
+                    </Slider>
                 </div>
-            ))}
-        </Slider>
-    </div>
-</section>
-
+            </section>
 
 
 
