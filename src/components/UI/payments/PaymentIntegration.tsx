@@ -26,13 +26,14 @@ const PaymentIntegration: React.FC = () => {
 
     return (
         <section className="bg-white">
+            
             {/* Header */}
             <div className="max-w-5xl mx-auto text-center px-6 py-8 md:py-16">
                 <h2 className="text-[20px] sm:text-[22px] md:text-[24px] lg:text-[28px]  font-bold mb-4">
                     Easy integration with videos <br /> to help guide you
                 </h2>
                 <p className="text-[11px] sm:text-[12px] md:text-[13px] text-gray-600 max-w-2xl mx-auto mb-10">
-                    Integrating SSLCOMMERZ is as simple as clicking on checkout, with well-documented
+                    Integrating GotiPay is as simple as clicking on checkout, with well-documented
                     SDKs, APIs, plugins, and a video tutorial available for all the major platforms and
                     languages.
                 </p>

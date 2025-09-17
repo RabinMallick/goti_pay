@@ -26,9 +26,7 @@ const PaymentCardForm: React.FC = () => {
 
   const [timeLeft, setTimeLeft] = useState(600); // 10 minutes
   const [openIndex, setOpenIndex] = useState(0); // first accordion open by default
-
-  // View mode: 'accordion' or 'tab'
-  const view: string = 'accordion';
+  const [view, setView] = useState<"tab" | "accordion">("tab");
 
   // Timer
   useEffect(() => {
@@ -83,8 +81,27 @@ const PaymentCardForm: React.FC = () => {
           </motion.div>
         </div>
 
+
         {/* Countdown Timer */}
-        <div className="flex bg-gray-200 justify-end px-4 mb-4 text-[12px] text-[var(--primary)]">
+        <div className="flex bg-gray-200 justify-between px-4 mb-4 text-[12px] text-[var(--primary)]">
+          
+        <div className="flex items-center justify-center  space-x-2 text-[9px]">
+          <span className={`font-semibold ${view === "accordion" ? "text-gray-700" : "text-gray-400"}`}>
+            Acc 
+          </span>
+          <button
+            onClick={() => setView(view === "tab" ? "accordion" : "tab")}
+            className={`relative inline-flex items-center h-[10px] rounded-full w-6 transition-colors duration-300 ${view === "tab" ? "bg-indigo-400" : "bg-gray-300"
+              }`}
+          >
+            <span
+              className={`inline-block w-[10px] h-[10px] transform bg-white rounded-full shadow-md transition-transform duration-300 ${view === "tab" ? "translate-x-4" : "translate-x-0"
+                }`}
+            />
+          </button>
+          <span className={`font-semibold ${view === "tab" ? "text-gray-700" : "text-gray-400"}`}>Tab</span>
+        </div>
+
           {formatTime(timeLeft)}
         </div>
 
@@ -98,7 +115,7 @@ const PaymentCardForm: React.FC = () => {
 
                   <motion.button
                     whileTap={{ scale: 0.99 }}
-                    className={`flex justify-between items-center w-full rounded-md px-4 border py-[10px] bg-gray-100 hover:bg-gray-200 focus:outline-none cursor-pointer ${isOpen ? 'text-black border-[var(--primary)]':'text-gray-400 border-gray-100'}`}
+                    className={`flex justify-between items-center w-full rounded-md px-4 border py-[10px] bg-gray-100 hover:bg-gray-200 focus:outline-none cursor-pointer ${isOpen ? 'text-black border-[var(--primary)]' : 'text-gray-400 border-gray-100'}`}
                     onClick={() => toggleAccordion(index, tab.id)}
                   >
                     <div className="flex items-center gap-2">
