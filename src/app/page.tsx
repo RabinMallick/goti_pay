@@ -208,7 +208,7 @@ const Home: FC = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: false, amount: 0.3 }}
-            className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-3 md:gap-6 mt-10"
+            className="grid grid-cols-2   lg:grid-cols-3 gap-3 md:gap-6 mt-10"
           >
             {features.map((feature, i) => (
              <WhyGotiPayCard feature={feature} i={i} rotateIn={rotateIn}/>
