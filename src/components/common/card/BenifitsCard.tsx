@@ -15,7 +15,7 @@ const BenifitsCard: React.FC<BenifitsCardProps> = ({ b, idx }) => {
     return (
         <motion.div
             key={idx}
-            className="relative bg-white/80 backdrop-blur-xl border border-gray-100 
+            className="relative bg-white  backdrop-blur-xl border border-gray-100 
                    rounded-lg p-6  hover:shadow-2xl transition-all duration-300
                    hover:-translate-y-3 group"
             variants={{

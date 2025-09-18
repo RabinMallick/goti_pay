@@ -15,10 +15,10 @@ const TrustedBrands = ({ logos }: { logos: string[] }) => {
     return (
         <section className="py-12 bg-gray-50">
             <div className="max-w-6xl mx-auto text-center">
-                <h2 className="text-xl sm:text-2xl md:text-3xl font-bold">
+                <h2 className="text-lg sm:text-xl md:text-2xl font-bold">
                     Trusted by <span className="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">Leading Brands</span>
                 </h2>
-                <p className="mt-1 text-gray-600 max-w-2xl mx-auto text-sm md:text-md">
+                <p className="text-xs md:text-md text-gray-600 mt-4 max-w-3xl mx-auto">
                     We collaborate with top brands to bring you secure and reliable payment solutions.
                 </p>
 
