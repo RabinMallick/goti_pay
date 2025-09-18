@@ -21,7 +21,7 @@ const StatsSection: React.FC = () => {
   }, []);
 
   return (
-    <section className="bg-indigo-600/40 text-white py-10 relative overflow-hidden">
+    <section className="bg-indigo-600/40 text-white py-6 md:py-10 relative overflow-hidden">
       <div className="max-w-6xl mx-auto grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
         {stats.map((stat, idx) => (
           <div
@@ -33,8 +33,8 @@ const StatsSection: React.FC = () => {
             `}
             style={{ transitionDelay: `${idx * 150}ms` }} // stagger effect
           >
-            <h3 className="text-4xl font-bold">{stat.value}</h3>
-            <p className="text-sm mt-1">{stat.label}</p>
+            <h3 className="text-xl sm:text-2xl md:text-4xl font-bold">{stat.value}</h3>
+            <p className="text-[11px] md:text-sm mt-1">{stat.label}</p>
             <div className="border-t border-white/30 mt-2 w-10 mx-auto"></div>
           </div>
         ))}

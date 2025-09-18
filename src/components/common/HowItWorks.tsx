@@ -1,6 +1,14 @@
 import React from "react";
 
-const steps = [
+// Step interface
+interface Step {
+  step: string;
+  title: string;
+  desc: string;
+}
+
+// Steps array
+const steps: Step[] = [
   { step: "1", title: "Sign Up", desc: "Create your merchant account with easy online onboarding." },
   { step: "2", title: "Integrate", desc: "Use our APIs, SDKs or plugins to connect your platform." },
   { step: "3", title: "Go Live", desc: "Start accepting payments instantly with secure transactions." },

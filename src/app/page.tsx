@@ -320,8 +320,6 @@ const Home: FC = () => {
               <WhyGotiPayCard
                 key={i}
                 feature={feature}
-                i={i}
-                rotateIn={rotateIn}
               />
             ))}
           </motion.div>
