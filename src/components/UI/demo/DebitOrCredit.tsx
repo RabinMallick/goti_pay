@@ -147,7 +147,7 @@ const DebitOrCredit: FC = () => {
                             className={`border border-gray-200 ${formik.touched.cardNumber && formik.errors.cardNumber ? '' : 'border-t-0'} border-l-0 rounded-br-md px-3 p-2 w-full bg-gray-50 text-gray-700 text-base sm:text-[13px] placeholder-gray-300 focus:outline-none`}
                         />
                         <Image
-                            src={formik.touched.cvc && formik.errors.cvc ? '/cvverror.svg' : '/cvv.svg'}
+                            src={formik.touched.cvc && formik.errors.cvc ? 'svg/cvverror.svg' : 'svg/cvv.svg'}
                             alt="cvv"
                             width={25}
                             height={12}

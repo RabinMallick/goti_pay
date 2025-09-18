@@ -2,6 +2,7 @@
 import React from "react";
 import Slider from "react-slick";
 import Image from "next/image";
+import { imagePath } from "@/utils/baseurl";
 
 interface PaymentCarouselProps {
   logos: string[];
@@ -36,7 +37,7 @@ const PaymentCarousel: React.FC<PaymentCarouselProps> = ({ logos }) => {
           {repeatedLogos.map((logo, idx) => (
             <div key={idx} className="flex justify-center items-center px-2">
               <Image
-                src={logo}
+                src={`${imagePath + logo}`}
                 alt={`logo-${idx}`}
                 width={0}
                 height={0}

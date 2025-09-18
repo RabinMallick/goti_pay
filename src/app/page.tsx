@@ -128,27 +128,27 @@ const testimonials = [
   {
     name: 'Rahim Traders',
     review: 'GotiPay made our payment process seamless. Excellent support!',
-    avatar: '/images/user.png',
+    avatar: 'images/user.png',
   },
   {
     name: 'TechHive Ltd',
     review: 'Integration was super easy. Transactions are smooth and fast.',
-    avatar: '/images/user.png',
+    avatar: 'images/user.png',
   },
   {
     name: 'ShopEasy',
     review: 'Great pricing and secure platform. Our customers love it.',
-    avatar: '/images/user.png',
+    avatar: 'images/user.png',
   },
   {
     name: 'Alpha Solutions',
     review: 'Fantastic service and easy to use API. Highly recommend!',
-    avatar: '/images/user.png',
+    avatar: 'images/user.png',
   },
   {
     name: 'Beta Enterprises',
     review: 'Reliable and fast transactions. Our team loves it!',
-    avatar: '/images/user.png',
+    avatar: 'images/user.png',
   },
 ];
 

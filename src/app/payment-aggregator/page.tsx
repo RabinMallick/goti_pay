@@ -13,6 +13,7 @@ import {
 import Tooltip from '@/components/Tooltip/Tooltip';
 import Image from 'next/image';
 import Slider from 'react-slick';
+import { imagePath } from '@/utils/baseurl';
 
 const features = [
     { icon: <FiCreditCard />, title: 'Multiple Payment Methods', description: 'Accept cards, UPI, wallets & net banking seamlessly.' },
@@ -22,19 +23,19 @@ const features = [
 ];
 
 const supportedGateways = [
-    { merchant: 'bKash', img: '/bkash.svg' },
-    { merchant: 'Nagad', img: '/nagad.svg' },
-    { merchant: 'Rocket', img: '/rocket.svg' },
-    { merchant: 'Upay', img: '/upay.svg' },
-    { merchant: 'ST Pay', img: '/stpay.svg' },
-    { merchant: 'Pathao', img: '/pathao.svg' },
-    { merchant: 'Mcash', img: '/mcash.svg' },
-    { merchant: 'Cellfin', img: '/cellfin.svg' },
-    { merchant: 'Pocket', img: '/pocket.svg' },
-    { merchant: 'Visa', img: '/visa.svg' },
-    { merchant: 'MasterCard', img: '/master.svg' },
-    { merchant: 'UnionPay', img: '/unionpay.svg' },
-    { merchant: 'Amex', img: '/amex.svg' },
+    { merchant: 'bKash', img: `${imagePath}svg/bkash.svg` },
+    { merchant: 'Nagad', img: `${imagePath}svg/nagad.svg` },
+    { merchant: 'Rocket', img: `${imagePath}svg/rocket.svg` },
+    { merchant: 'Upay', img: `${imagePath}svg/upay.svg` },
+    { merchant: 'ST Pay', img: `${imagePath}svg/stpay.svg` },
+    { merchant: 'Pathao', img: `${imagePath}svg/pathao.svg` },
+    { merchant: 'Mcash', img: `${imagePath}svg/mcash.svg` },
+    { merchant: 'Cellfin', img: `${imagePath}svg/cellfin.svg` },
+    { merchant: 'Pocket', img: `${imagePath}svg/pocket.svg` },
+    { merchant: 'Visa', img: `${imagePath}svg/visa.svg` },
+    { merchant: 'MasterCard', img: `${imagePath}svg/master.svg` },
+    { merchant: 'UnionPay', img: `${imagePath}svg/unionpay.svg` },
+    { merchant: 'Amex', img: `${imagePath}svg/amex.svg` },
 ];
 
 const benefits = [

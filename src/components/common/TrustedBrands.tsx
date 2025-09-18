@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
+import { imagePath } from "@/utils/baseurl";
 
 const TrustedBrands = ({ logos }: { logos: string[] }) => {
     const controls = useAnimation();
@@ -37,7 +38,7 @@ const TrustedBrands = ({ logos }: { logos: string[] }) => {
                         {[...logos, ...logos].map((logo, i) => (
                             <div key={i} className="flex-shrink-0">
                                 <Image
-                                    src={`/${logo}`}
+                                    src={`${imagePath}svg/${logo}`}
                                     alt="partner"
                                     width={100}
                                     height={40}

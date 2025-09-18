@@ -14,9 +14,9 @@ import { PaymentTab, setActiveTab } from '@/store/slice/paymentSlice';
 import { useRouter } from 'next/navigation';
 
 const tabs = [
-  { id: 'card', label: 'Card', icon: '/card.svg', content: <DebitOrCredit /> },
-  { id: 'mobile', label: 'Mobile Bank', icon: '/mfs.svg', content: <MoblieBanking /> },
-  { id: 'net', label: 'Net Bank', icon: '/bank.svg', content: <NetBanking /> },
+  { id: 'card', label: 'Card', icon: 'svg/card.svg', content: <DebitOrCredit /> },
+  { id: 'mobile', label: 'Mobile Bank', icon: 'svg/mfs.svg', content: <MoblieBanking /> },
+  { id: 'net', label: 'Net Bank', icon: 'svg/bank.svg', content: <NetBanking /> },
 ] as const;
 
 const PaymentCardForm: React.FC = () => {
@@ -64,7 +64,7 @@ const PaymentCardForm: React.FC = () => {
       >
         {/* Header */}
         <div className="text-center p-4 px-0 relative">
-          <Image src="/logo.svg" alt="logo" width={100} height={20} className="mx-auto" />
+          <Image src="svg/logo.svg" alt="logo" width={100} height={20} className="mx-auto" />
           <p className="text-gray-600 text-xs mt-2 leading-4">
             GotiPay Limited <br />
             <small>4th Floor, 100/A Shukrabad, Dhanmondi, Dhaka-1216</small>

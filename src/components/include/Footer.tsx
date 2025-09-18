@@ -6,7 +6,7 @@ import { FaFacebookF, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { path } from "@/utils/baseurl";
+import { imagePath, path } from "@/utils/baseurl";
 import ScrollTop from "../Button/ScrollTop";
 
 const Footer: React.FC = () => {
@@ -67,9 +67,9 @@ const Footer: React.FC = () => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: false, amount: 0.3 }}
-      > 
+      >
         <motion.div variants={fadeUp}>
-          <Image src="/logo.svg" alt="Gotipay Logo" width={150} height={50} className="object-contain" />
+          <Image src={`${imagePath}svg/logo.svg`} alt="Gotipay Logo" width={150} height={50} className="object-contain" />
         </motion.div>
         <motion.div className="flex gap-3" variants={fadeUp}>
           <a href="https://www.apple.com/app-store/" target="_blank" rel="noopener noreferrer">
@@ -148,7 +148,7 @@ const Footer: React.FC = () => {
         </div>
       </motion.div>
 
-      <ScrollTop/>
+      <ScrollTop />
     </footer>
   );
 };

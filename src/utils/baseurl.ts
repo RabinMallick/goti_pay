@@ -7,6 +7,10 @@ export const baseUrlHotel = process.env.NEXT_PUBLIC_API_URL_HOTEL;
 export const path = process.env.NEXT_PUBLIC_API_URL_CDNS3;
 export const mapboxToken = process.env.NEXT_PUBLIC_NEXTMAPBOX_TOKEN;
 
+
 export const airlineImg = path + 'airlines/';
 export const bankImg = path + 'banks/';
 export const mfsImg = path + 'mbanking/';
+
+export const imagePath = domain 
+

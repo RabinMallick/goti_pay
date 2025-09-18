@@ -22,7 +22,7 @@ export default function Navbar() {
       <div className="max-w-6xl  flex flex-wrap items-center justify-between mx-auto p-3">
         {/* Logo */}
         <Link href="/" className="flex items-center">
-          <Image src="/logo.svg" alt="Logo" width={110} height={32} priority />
+          <Image src="svg/logo.svg" alt="Logo" width={110} height={32} priority />
         </Link>
 
         {/* Mobile Menu Button */}

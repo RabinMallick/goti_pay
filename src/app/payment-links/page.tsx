@@ -6,9 +6,10 @@ import { motion } from "framer-motion";
 import PaymentCarousel from "@/components/Carousel/PaymentCarousel";
 import SimplifyingPayments from "@/components/UI/payments/SimplifyingPayments";
 import PaymentLinkFeatures from "@/components/UI/payments/PaymentLinkFeatures";
+import { imagePath } from "@/utils/baseurl";
 
 const HeroSection: React.FC = () => {
-    const logos = Array(8).fill("logo.svg");
+    const logos = Array(8).fill("svg/logo.svg");
 
     const textVariant = {
         hidden: { opacity: 0, y: 20 },
@@ -73,7 +74,7 @@ const HeroSection: React.FC = () => {
                 >
                     <motion.div whileHover={{ y: -10 }} className="relative">
                         <Image
-                            src="/avif/payment-linkd.avif"
+                            src={`${imagePath}avif/payment-linkd.avif`}
                             alt="Payment link illustration"
                             width={500}
                             height={400}
@@ -84,12 +85,12 @@ const HeroSection: React.FC = () => {
             </div>
 
             {/* Carousel & Simplifying Payments */}
-            
+
             <PaymentCarousel logos={logos} />
-            
+
             <SimplifyingPayments />
-            <PaymentLinkFeatures/>
-            
+            <PaymentLinkFeatures />
+
         </div>
     );
 };
